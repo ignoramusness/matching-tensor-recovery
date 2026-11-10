@@ -1,0 +1,30 @@
+{
+  "eight_vertex_triangle": {
+    "shape": [
+      56,
+      56
+    ],
+    "determinant": -262144,
+    "matrix_sha256": "e820858a0dadc3e927ce5d8cf39d7c44720c3fb486e5b567a9ba596ffe23ba53"
+  },
+  "six_vertex_odd_minor": {
+    "shape": [
+      30,
+      30
+    ],
+    "determinant": 128,
+    "matrix_sha256": "fb46ca2a7bf6bd56c2a5e10ff50ca2c75208056c20abc02b5c702665139a6172",
+    "omitted_rows": [
+      [
+        2,
+        3,
+        5
+      ],
+      [
+        2,
+        4,
+        5
+      ]
+    ]
+  }
+}

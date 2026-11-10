@@ -1,0 +1,6099 @@
+{
+  "prime": 1000003,
+  "definition": "coefficient of t in matching product at padded I3",
+  "count": 90,
+  "checks": [
+    {
+      "label": "all-four-supports-0",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [],
+      "variable_edges": [],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-1",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-2",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-3",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-4",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-5",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-6",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-7",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-8",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "variable_edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-9",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-10",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-11",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-12",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-13",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-14",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-15",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-16",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-17",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-18",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-19",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-20",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-21",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-22",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-23",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-24",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-25",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-26",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-27",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-28",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-29",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-30",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "perfect_matchings": 2,
+      "incidence_rank": 2,
+      "rank_mod": 34,
+      "expected": 34
+    },
+    {
+      "label": "all-four-supports-31",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "perfect_matchings": 2,
+      "incidence_rank": 2,
+      "rank_mod": 34,
+      "expected": 34
+    },
+    {
+      "label": "all-four-supports-32",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-33",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-34",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-35",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-36",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-37",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-38",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-39",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-40",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-41",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-42",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-43",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-44",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-45",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 2,
+      "incidence_rank": 2,
+      "rank_mod": 34,
+      "expected": 34
+    },
+    {
+      "label": "all-four-supports-46",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-47",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 2,
+      "incidence_rank": 2,
+      "rank_mod": 34,
+      "expected": 34
+    },
+    {
+      "label": "all-four-supports-48",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-49",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-50",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-51",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 2,
+      "incidence_rank": 2,
+      "rank_mod": 34,
+      "expected": 34
+    },
+    {
+      "label": "all-four-supports-52",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-53",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-54",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-55",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 2,
+      "incidence_rank": 2,
+      "rank_mod": 34,
+      "expected": 34
+    },
+    {
+      "label": "all-four-supports-56",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "all-four-supports-57",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-58",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-59",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 2,
+      "incidence_rank": 2,
+      "rank_mod": 34,
+      "expected": 34
+    },
+    {
+      "label": "all-four-supports-60",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "all-four-supports-61",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 2,
+      "incidence_rank": 2,
+      "rank_mod": 34,
+      "expected": 34
+    },
+    {
+      "label": "all-four-supports-62",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "perfect_matchings": 2,
+      "incidence_rank": 2,
+      "rank_mod": 34,
+      "expected": 34
+    },
+    {
+      "label": "all-four-supports-63",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 3,
+      "incidence_rank": 3,
+      "rank_mod": 51,
+      "expected": 51
+    },
+    {
+      "label": "six-support-0",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 15,
+      "incidence_rank": 10,
+      "rank_mod": 130,
+      "expected": 130
+    },
+    {
+      "label": "six-selected-0",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 15,
+      "incidence_rank": 5,
+      "rank_mod": 45,
+      "expected": 45
+    },
+    {
+      "label": "six-support-1",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 2,
+      "incidence_rank": 2,
+      "rank_mod": 50,
+      "expected": 50
+    },
+    {
+      "label": "six-selected-1",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 2,
+      "incidence_rank": 2,
+      "rank_mod": 26,
+      "expected": 26
+    },
+    {
+      "label": "six-support-2",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "perfect_matchings": 6,
+      "incidence_rank": 5,
+      "rank_mod": 77,
+      "expected": 77
+    },
+    {
+      "label": "six-selected-2",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "perfect_matchings": 6,
+      "incidence_rank": 4,
+      "rank_mod": 36,
+      "expected": 36
+    },
+    {
+      "label": "six-support-3",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 25,
+      "expected": 25
+    },
+    {
+      "label": "six-selected-3",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 17,
+      "expected": 17
+    },
+    {
+      "label": "six-support-4",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "six-selected-4",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_edges": [],
+      "perfect_matchings": 0,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "six-support-5",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 1,
+      "rank_mod": 25,
+      "expected": 25
+    },
+    {
+      "label": "six-selected-5",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 1,
+      "incidence_rank": 0,
+      "rank_mod": 0,
+      "expected": 0
+    },
+    {
+      "label": "six-support-6",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "perfect_matchings": 2,
+      "incidence_rank": 2,
+      "rank_mod": 42,
+      "expected": 42
+    },
+    {
+      "label": "six-selected-6",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "perfect_matchings": 2,
+      "incidence_rank": 2,
+      "rank_mod": 42,
+      "expected": 42
+    },
+    {
+      "label": "six-support-7",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 3,
+      "incidence_rank": 3,
+      "rank_mod": 67,
+      "expected": 67
+    },
+    {
+      "label": "six-selected-7",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 3,
+      "incidence_rank": 3,
+      "rank_mod": 35,
+      "expected": 35
+    },
+    {
+      "label": "six-support-8",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 4,
+      "incidence_rank": 4,
+      "rank_mod": 76,
+      "expected": 76
+    },
+    {
+      "label": "six-selected-8",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 4,
+      "incidence_rank": 4,
+      "rank_mod": 52,
+      "expected": 52
+    },
+    {
+      "label": "six-support-9",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 7,
+      "incidence_rank": 7,
+      "rank_mod": 103,
+      "expected": 103
+    },
+    {
+      "label": "six-selected-9",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 7,
+      "incidence_rank": 5,
+      "rank_mod": 45,
+      "expected": 45
+    },
+    {
+      "label": "six-support-10",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 15,
+      "incidence_rank": 10,
+      "rank_mod": 130,
+      "expected": 130
+    },
+    {
+      "label": "six-selected-10",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 15,
+      "incidence_rank": 8,
+      "rank_mod": 72,
+      "expected": 72
+    },
+    {
+      "label": "six-support-11",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 15,
+      "incidence_rank": 10,
+      "rank_mod": 130,
+      "expected": 130
+    },
+    {
+      "label": "six-selected-11",
+      "dimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 15,
+      "incidence_rank": 7,
+      "rank_mod": 63,
+      "expected": 63
+    },
+    {
+      "label": "unequal-four-complete",
+      "dimensions": [
+        3,
+        4,
+        3,
+        5
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "perfect_matchings": 3,
+      "incidence_rank": 3,
+      "rank_mod": 80,
+      "expected": 80
+    },
+    {
+      "label": "unequal-six-cycle",
+      "dimensions": [
+        3,
+        4,
+        3,
+        4,
+        3,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "variable_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "perfect_matchings": 2,
+      "incidence_rank": 2,
+      "rank_mod": 62,
+      "expected": 62
+    }
+  ]
+}

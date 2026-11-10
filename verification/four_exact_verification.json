@@ -1,0 +1,112 @@
+[
+  {
+    "dimensions": [
+      2,
+      3,
+      3,
+      3
+    ],
+    "jacobian_minor_size": 41,
+    "jacobian_minor_integer_determinant": -1,
+    "kernel_minor_size": 4,
+    "kernel_minor_integer_determinant": 2,
+    "sorted_kernel_minor_integer_determinant": 2,
+    "omitted_output_rows": [
+      0,
+      2,
+      6,
+      8,
+      11,
+      14,
+      17,
+      27,
+      40,
+      41,
+      45,
+      48,
+      49
+    ],
+    "omitted_parameter_columns": [
+      19,
+      30,
+      37,
+      43
+    ],
+    "sorted_row_minor_integer_determinant": -1
+  },
+  {
+    "dimensions": [
+      2,
+      2,
+      3,
+      3
+    ],
+    "jacobian_minor_size": 32,
+    "jacobian_minor_integer_determinant": 1,
+    "kernel_minor_size": 5,
+    "kernel_minor_integer_determinant": 2,
+    "sorted_kernel_minor_integer_determinant": 2,
+    "omitted_output_rows": [
+      2,
+      3,
+      5,
+      11
+    ],
+    "omitted_parameter_columns": [
+      20,
+      23,
+      28,
+      32,
+      36
+    ],
+    "sorted_row_minor_integer_determinant": -1
+  },
+  {
+    "dimensions": [
+      2,
+      2,
+      2,
+      3
+    ],
+    "jacobian_minor_size": 24,
+    "jacobian_minor_integer_determinant": -1,
+    "kernel_minor_size": 6,
+    "kernel_minor_integer_determinant": 2,
+    "sorted_kernel_minor_integer_determinant": -2,
+    "omitted_output_rows": [],
+    "omitted_parameter_columns": [
+      16,
+      19,
+      20,
+      25,
+      26,
+      27
+    ],
+    "sorted_row_minor_integer_determinant": -1
+  },
+  {
+    "dimensions": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "jacobian_minor_size": 16,
+    "jacobian_minor_integer_determinant": 1,
+    "kernel_minor_size": 7,
+    "kernel_minor_integer_determinant": -2,
+    "sorted_kernel_minor_integer_determinant": -2,
+    "omitted_output_rows": [],
+    "omitted_parameter_columns": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      23
+    ],
+    "sorted_row_minor_integer_determinant": 1
+  }
+]
