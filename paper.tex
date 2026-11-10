@@ -1,0 +1,1672 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{microtype}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{introthm}{Theorem}
+\renewcommand{\theintrothm}{\Alph{introthm}}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Span}{span}
+\newcommand{\C}{\mathbb C}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cX}{\mathcal X}
+\newcommand{\PM}{\operatorname{PM}}
+\title{Dimensions and generic recovery\protect\\of matching tensors}
+\author{Ignoramus}
+\date{10 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Give each vertex $i$ of a graph a complex vector space $V_i$, place a tensor $W_{ij}\in V_i\otimes V_j$ on each edge, and sum the tensor products of these edge tensors over all perfect matchings. We study the image of this matching-tensor map and the recovery of the edge tensors from its output. For every support graph with a perfect matching and all local dimensions at least three, the image closure has dimension $N_*-|E_*|+\dim P(G)+1$, where $E_*$ is the set of edges lying in some perfect matching, $N_*$ is the number of parameters on those edges and $P(G)$ is the perfect matching polytope; on those edges the generic differential kernel consists of the edge rescalings that preserve every matching term. For complete support at every even order at least four and all local dimensions at least three, the entire fibre over a general output is a single vertex-rescaling orbit, and a normalized representative is a rational function of the output. The proof recovers cofactor lines from tangent spaces and glues lower-order representations, allowing vanishing cofactors. For complete support at every even order at least six, the dimension formula and the vertex-rescaling kernel remain valid when the local dimensions are only two. At four vertices we determine the dimension in every format with local dimensions at least two.
+\end{abstract}
+
+\section{Introduction}
+Let $G$ be a simple graph on an even number of vertices, and assign a tensor $W_{ij}\in V_i\otimes V_j$ to each edge. Its matching tensor is
+\[
+ F_G(W)=\sum_{M\in\PM(G)}\prod_{ij\in M}W_{ij}\in\bigotimes_i V_i.
+\]
+The products occupy disjoint vertex slots and are placed in vertex order; there are no signs. Different matchings share the same edge parameters. A coordinate of $F_G(W)$ is indexed by an \emph{output word}, a choice of one basis label at each vertex. All results are over $\C$, and we distinguish the image of $F_G$ from its Zariski closure throughout. We study the dimension of this family and the ambiguity in recovering its edge tensors from the output tensor.
+
+This is the weighted bicoloured perfect-matching model of \cite[Definitions 2.1--2.3]{kgs}, which arises from the description of optical quantum experiments by graphs \cite{kgz,gu,gu-three}. There a coordinate of $F_G(W)$ is the weight of a vertex colouring, and Question~1 of \cite{kgs} asks for which $n$ and $d$ some graph has its $d$ monochromatic colourings of unit weight and every other colouring of weight zero. In the present language, it asks for which $n$ and $d$ the $d$-ary GHZ tensor $\sum_{a=1}^de_a^{\otimes n}$ lies in the image of $F_{K_n}$ when every $\dim V_i=d$. The only known affirmative cases are $d=2$ with $n$ even, and $d=3$ with $n=4$ \cite{kgs}. Krenn and Gu conjectured that there is no affirmative case with $n>4$ and $d\geq3$; Chandran, Gajjala and Illickan prove the conjecture for graphs of vertex connectivity at most two and for cubic graphs \cite{cgi}. The results below do not decide this question. They concern general outputs, and the ternary GHZ tensor is a special point: by an unrefereed note of Afshan \cite{closure} it lies in the closure of the image at every even order at least four, so no polynomial vanishing on the image closure separates it from the image.
+
+For complete support, vertex rescaling $W_{ij}\mapsto t_it_jW_{ij}$ with $\prod_i t_i=1$ preserves every matching term. This gives an apparent loss of $n-1$ parameters, but does not exclude further continuous ambiguities or finitely many distinct rescaling orbits. Sparse support and two-dimensional local spaces make both issues substantive.
+
+\subsection*{Main results}
+Write $d_i=\dim V_i$. An edge is \emph{active} if it lies in a perfect matching; $E_*$ is the set of active edges, $N_*=\sum_{ij\in E_*}d_id_j$, and $A$ is the perfect-matching incidence matrix, with one row for each perfect matching and one column for each active edge. For complete support write $N=\sum_{i<j}d_id_j$.
+
+\begin{introthm}[Theorem~\ref{thm:arbitrary-support}, Corollaries~\ref{cor:polytope-dimension} and~\ref{cor:brick-dimension}]
+Let $G$ be a simple graph on an even number $n\geq4$ of vertices with a perfect matching, and let every $d_i\geq3$. The image closure of $F_G$ has dimension
+\[
+ N_*-|E_*|+\rank A=N_*-|E_*|+\dim P(G)+1,
+\]
+where $P(G)$ is the perfect matching polytope. At a general parameter the differential kernel on active blocks consists exactly of the edge rescalings $(x_eW_e)_{e\in E_*}$ with $Ax=0$. If the active subgraph is connected, the dimension is $N_*-n+2-\beta$, where $\beta$ is the number of bricks of the active subgraph.
+\end{introthm}
+
+\begin{introthm}[Theorem~\ref{thm:global-all-order} and Corollary~\ref{cor:rational-all-order}]
+Let $G=K_n$ with $n\geq4$ even, and let every $d_i\geq3$. There is a nonempty Zariski-open subset $U$ of the image closure, contained in the image, such that for every $\omega\in U$ the fibre $F^{-1}(\omega)$ is a single orbit of the vertex-rescaling torus. A normalized representative of this orbit is a rational function of $\omega$.
+\end{introthm}
+
+\begin{introthm}[Theorem~\ref{thm:qubit}]
+Let $G=K_n$ with $n\geq6$ even, and let every $d_i\geq2$. The image closure has dimension $N-n+1$, and at a general parameter the differential kernel consists exactly of the vertex rescalings.
+\end{introthm}
+
+\begin{introthm}[Theorem~\ref{thm:sharp-four}]
+Let $G=K_4$, let every $d_i\geq2$, and let $k$ be the number of two-dimensional $V_i$. For $k\leq3$ the image closure has dimension $N-3-k$; for $k=4$ it is the whole tensor space.
+\end{introthm}
+
+Theorems~A and~C are dimension statements; Theorem~B is the global recovery statement. Not proved here: global recovery in any format with a two-dimensional factor, global recovery on sparse support in any format, the dimension or recovery on sparse support when some factor is two-dimensional (where the formula of Theorem~A can fail, Remark~\ref{ex:sparse-qubit-failure}), a recovery procedure, and a description of the exceptional outputs. For $n\geq6$ and every $d_i\geq2$, Theorem~C with Proposition~\ref{prop:local} gives local injectivity modulo vertex rescaling at a general source; that is the only recovery statement here for two-dimensional factors.
+
+\subsection*{Methods}
+For Theorem~A, three labels at each vertex isolate edge variations, and elementary pair marginals determine the remaining rescaling weights. For Theorem~B, an orthogonal-weight calculation recovers the line of every pair-deleted matching cofactor from the tangent space of the image at a general output (Lemma~\ref{lem:all-order-contact}). Every competing preimage must then have proportional cofactors, with constants that may vanish, and an induction on the order shows that the constants are nonzero and that the competing preimage is a vertex rescaling (Proposition~\ref{prop:cofactor-gluing}). A tree normalization gives the rational representative. For Theorem~C, a parity decomposition, two explicit integer determinants and a restriction to eight-element vertex subsets replace the three-label argument. At four vertices each two-dimensional factor contributes an explicit additional symmetry (Lemma~\ref{lem:root-shear}).
+
+\subsection*{Related work}
+Differential ranks and gauge symmetries are established tools in tensor-network geometry \cite{bdg}. Standard tensor-network parametrizations vary vertex maps in a contraction along a fixed network; the present map varies shared edge tensors and sums over different matchings. For scalar edge weights the vertex gauge is classical in dimer theory: multiplying the weights at one vertex leaves the matching measure unchanged \cite[Section~3.2]{kenyon}.
+
+For a centred Gaussian vector, every product moment is a sum over pairings of products of covariances \cite{isserlis}. Moment varieties of Gaussian mixtures are studied in \cite{afs}, and identifiability has been studied for Gaussian moments of fixed degree and for sums of powers of quadratic forms \cite{blomenhofer,centeredGaussian}. Group the variables of a quadratic form by vertex, and write $Q=\sum_{i<j}Q_{ij}$, where $Q_{ij}$ is the bilinear form between the groups of vertices $i$ and $j$ whose coefficients are those of $W_{ij}$. Our map retains the component of $Q^{n/2}/(n/2)!$ of degree one in each vertex group. This projection discards the coordinates in which a vertex group occurs more than once, and it is invariant under vertex rescaling, so a one-to-one statement for the full map does not apply to it. The perfect matching polytope is classical \cite{elp}; we use its dimension as an invariant of this tensor parametrization.
+
+At four vertices the image closure is the join of the three cones of tensors decomposable across the bipartitions $12|34$, $13|24$ and $14|23$ (Proposition~\ref{prop:secant}). Non-defectivity of joins of such partition-rank-one varieties is studied in \cite{bc-joins}, which names finiteness of minimal partition-rank decompositions as an aim and proves no uniqueness statement; at four vertices Theorem~B is a uniqueness statement of this kind for one join. From six vertices on, an edge block occurs in several matchings, so the image is a small subvariety of the join of the matching cones, and no theorem about joins can give Theorem~B: for $d_i=3$ and $n=14$ there are $13!!=135{,}135$ matching cones, each of dimension $57$, and $135{,}135\cdot57=7{,}702{,}695$ exceeds the ambient dimension $3^{14}=4{,}782{,}969$.
+
+Tangent-contact criteria for identifiability are standard \cite[Proposition~2.4]{co}, \cite[Proposition~8]{ballico}; here the model-specific ingredients are the cofactor-contact calculation at every order and the gluing argument that excludes degenerate competing preimages. Identifiability under non-generic coordinate projections is studied in the hypergraph-rigidity framework of \cite{cmnt}, whose main global results concern determinant and tensor-product measurements; we have not been able to apply them to the vertex-rescaling ambiguity here. For post-selected photonic states, \cite{bsl} pose the inverse problem of finding graph weights that produce a target state and note that its solution is in general not unique; Theorem~B describes the non-uniqueness exactly for general targets with complete support and local dimensions at least three. Related scalar-hafnian notes recover edge data from observations on varying vertex subsets \cite{repo-four,repo-star}. Our observations instead use a fixed full vertex set with varying endpoint labels, and retain a continuous vertex-rescaling ambiguity.
+
+\subsection*{Plan of the paper}
+Section~\ref{sec:arbitrary} proves Theorem~A. Section~\ref{sec:complete} specializes it to complete support and to selected edge blocks. Section~\ref{sec:global-all} proves Theorem~B. Section~\ref{sec:qubits} proves Theorem~C and shows that its complete-support hypothesis cannot be dropped. Section~\ref{sec:four} proves Theorem~D. Section~\ref{sec:boundary} records low-degree equations and the distinction between the image and its closure. A final section describes the computational certificates and how the manuscript was produced.
+
+
+\section{Arbitrary support and its dimension}\label{sec:arbitrary}
+
+Let $G=([n],E)$ be a simple graph, where $n=2m\geq4$.
+For each vertex $i$, let $V_i$ be a complex vector space of dimension
+$d_i\geq3$. Write $\mathcal M=\PM(G)$ and define
+\[
+ F_G:\bigoplus_{ij\in E}V_i\otimes V_j\longrightarrow
+ \bigotimes_{i=1}^n V_i,\qquad
+ F_G(W)=\sum_{M\in\mathcal M}\prod_{ij\in M}W_{ij}.
+\]
+If $\mathcal M$ is empty, this map is zero. Henceforth assume otherwise.
+Call an edge \emph{active} if it belongs to a perfect matching, and let
+$E_*\subseteq E$ be the set of active edges. Every inactive block is
+absent from the polynomial $F_G$ and may be discarded. Set
+\[
+ N_* = \sum_{ij\in E_*}d_i d_j,
+ \qquad A=(\mathbf1_{e\in M})_{M\in\mathcal M,\,e\in E_*}.
+\]
+Thus $A$ is the perfect-matching incidence matrix, with one row for
+each perfect matching and one column for each active edge.
+
+Fix a basis $e_{i,1},\ldots,e_{i,d_i}$ of each $V_i$. In Sections~\ref{sec:arbitrary} to~\ref{sec:global-all} the labels $1,2,3$ are the \emph{core} labels and the others are \emph{noncore} labels. A nonempty Zariski-open subset of the parameter space is called \emph{parameter-open}.
+
+\begin{theorem}\label{thm:arbitrary-support}
+Let $n\geq4$ be even, let every $d_i\geq3$, and suppose $G$ has a perfect matching. The maximum and generic differential rank of $F_G$ are
+\begin{equation}\label{eq:graph-rank}
+ r_G=N_*-|E_*|+\rank A.
+\end{equation}
+At the \emph{padded rank-three point}
+\begin{equation}\label{eq:base}
+ W_e^0=\sum_{a=1}^3e_{i,a}\otimes e_{j,a},\qquad e=ij\in E_*,
+\end{equation}
+the kernel on active blocks is exactly
+\begin{equation}\label{eq:graph-witness-kernel}
+ \left\{(x_e W_e^0)_{e\in E_*}:x\in\ker A\right\}.
+\end{equation}
+On a nonempty Zariski-open set of parameters, the kernel on active
+blocks is exactly
+\begin{equation}\label{eq:graph-generic-kernel}
+ \left\{(x_e W_e)_{e\in E_*}:x\in\ker A\right\}.
+\end{equation}
+On the original parameter space, all variations of inactive blocks
+are added to either kernel. The image closure has affine dimension
+$r_G$ and projective dimension $r_G-1$.
+\end{theorem}
+
+\begin{proof}
+For $x\in\ker A$, differentiating the matching expansion gives
+\[
+ d(F_G)_W((x_eW_e)_e)
+ =\sum_{M\in\mathcal M}\left(\sum_{e\in M}x_e\right)
+     \prod_{e\in M}W_e=0.
+\]
+On the dense open set where all active blocks are nonzero, this
+supplies $|E_*|-\rank A$ independent kernel vectors. Consequently
+the rank there is at most $r_G$. Every larger minor of the polynomial
+Jacobian vanishes on that dense open set, hence identically. This proves
+the upper bound at every parameter point, including points with zero
+blocks.
+
+We determine the kernel at $W^0$. Write a variation on an active edge
+$e=ij$ in coordinates as $B_e^{ab}$, where $1\leq a\leq d_i$ and
+$1\leq b\leq d_j$. Suppose first that $(a,b)$ is not one of
+$(1,1),(2,2),(3,3)$. Choose $c\in\{1,2,3\}$ different from every
+member of $\{a,b\}$ that lies in $\{1,2,3\}$. Consider the output
+coordinate with labels $a,b$ at $i,j$ and label $c$ at all other
+vertices. A nonzero term in the differential must differentiate edge
+$ij$: differentiating any other edge leaves either a noncore label
+to be paired by $W^0$, or a singleton core label different from $c$.
+The coefficient is therefore
+\[
+ h_e B_e^{ab},\qquad h_e=|\PM(G-\{i,j\})|>0.
+\]
+Thus every off-diagonal or noncore coordinate of $B_e$ vanishes.
+
+Write the remaining diagonal coordinates as $x_e^a=B_e^{aa}$ for
+$a=1,2,3$. For distinct core labels $a,b$, consider the output
+coordinate with label $a$ at both endpoints of $e$ and label $b$
+elsewhere. Its differential coefficient is
+\[
+ h_e x_e^a+
+ \sum_{\substack{f\in E_*\\f\cap e=\varnothing}}
+ h_{ef}x_f^b,
+ \qquad h_{ef}=|\PM(G-(e\cup f))|.
+\]
+Here vertex sets, rather than edge sets, are deleted in $G-(e\cup f)$;
+the empty graph has one perfect matching. For fixed $b$, the second
+term is independent of the choice of $a\ne b$. Comparing the two
+possible choices gives equality of the other two diagonal entries of
+$B_e$. Taking $b=1,2,3$ yields
+$x_e^1=x_e^2=x_e^3=:x_e$. Hence $B_e=x_eW_e^0$.
+
+For a perfect matching $M$, put
+\[
+ T_M=\prod_{e\in M}W_e^0,
+ \qquad w_M=\sum_{e\in M}x_e=(Ax)_M.
+\]
+The remaining kernel condition is $\sum_Mw_MT_M=0$. Although the
+tensors $T_M$ need not be linearly independent, their elementary
+pair marginals suffice. Let $L_0$ sum all output coordinates whose
+labels belong to $\{1,2,3\}$. Then $L_0(T_M)=3^m$, so
+\begin{equation}\label{eq:total-matching-weight}
+ \sum_{M\in\mathcal M}w_M=0.
+\end{equation}
+For an active edge $f=ij$, let $L_f$ sum those same coordinates subject
+to the additional requirement that the labels at $i,j$ are equal.
+The matching edges carry independent core labels; therefore
+\[
+ L_f(T_M)=
+ \begin{cases}
+ 3^m,&f\in M,\\
+ 3^{m-1},&f\notin M.
+ \end{cases}
+\]
+Applying $L_f$ and using \eqref{eq:total-matching-weight} gives
+$\sum_{M\ni f}w_M=0$. Thus $A^{\top}Ax=0$.
+Since $A$ is a real matrix,
+\[
+ x^*A^{\top}Ax=(Ax)^*(Ax)=\sum_M|(Ax)_M|^2,
+\]
+so $Ax=0$. This establishes \eqref{eq:graph-witness-kernel} over
+$\C$.
+
+The witness attains the upper bound. The same rank holds on a nonempty
+Zariski-open set; intersecting it with the set of nonzero active
+blocks proves \eqref{eq:graph-generic-kernel} by dimension. The generic
+Jacobian-rank theorem in characteristic zero identifies this rank
+with the dimension of the image closure. The closure is irreducible,
+and is a nonzero cone because $F_G$ is homogeneous of positive degree.
+Its projective dimension is therefore one less.
+\end{proof}
+
+\begin{corollary}\label{cor:polytope-dimension}
+Let $P(G)$ be the convex hull of the perfect-matching incidence
+vectors, in $\mathbb R^{E_*}$. Then
+\[
+ \dim\overline{\operatorname{im}F_G}
+ =\sum_{ij\in E_*}d_id_j-|E_*|+\dim P(G)+1.
+\]
+\end{corollary}
+\begin{proof}
+Every row of $A$ has coordinate sum $m\ne0$. The linear span of these
+rows consequently has dimension exactly one more than their affine
+span, so $\rank A=\dim P(G)+1$.
+\end{proof}
+
+\paragraph{The classical brick count.}
+A connected graph with at least one edge is \emph{matching covered} if every edge belongs to a
+perfect matching. A cut is nontrivial when both sides contain at least two vertices. It is \emph{tight} if every perfect
+matching uses exactly one of its edges. Splitting at each such cut into the two graphs obtained by contracting
+one side or the other decomposes the graph into pieces with
+no nontrivial tight cut. The nonbipartite pieces are its \emph{bricks}.
+Their number does not depend on the decomposition \cite{lovasz}; for a
+matching covered graph $H$ we write $\beta(H)$ for it.
+Contractions may produce parallel edges. We set $\beta(K_2)=0$.
+Write $G_*=([n],E_*)$ for the active subgraph. When it is connected it
+is matching covered.
+
+\begin{corollary}\label{cor:brick-dimension}
+Suppose the active subgraph $G_*$ is connected and every $d_i\geq3$. Then
+\[
+ \dim\overline{\operatorname{im}F_G}=N_*-n+2-\beta(G_*),
+ \qquad \dim\ker d(F_G)_{W,\mathrm{active}}=n-2+\beta(G_*)
+\]
+at a general parameter point. In particular, the kernel dimension is
+$n-2$ for bipartite matching-covered support and $n-1$ for a brick.
+\end{corollary}
+\begin{proof}
+The classical formula for the dimension of the perfect matching
+polytope, due to Edmonds, Pulleyblank and Lov\'asz and strengthening
+Naddef's work \cite{elp,naddef} (see also
+\cite[Section 1.2]{abdi-silina}), is
+\[
+ \dim P(G)=\dim P(G_*)=|E_*|-n+1-\beta(G_*).
+\]
+Substitution into Corollary~\ref{cor:polytope-dimension} gives the image
+dimension; subtracting it from $N_*$ gives the generic kernel dimension.
+The standard tight-cut decomposition has no bricks exactly when the
+graph is bipartite.
+\end{proof}
+
+For disconnected active support with $c$ connected components, let $\beta_*$
+be the sum of their brick counts, counting a $K_2$ component as zero.
+Because the perfect matching polytope is the product of the component
+polytopes, the corresponding formulas are
+\begin{equation}\label{eq:disconnected}
+ \dim\overline{\operatorname{im}F_G}=N_*-n+c+1-\beta_*,
+ \qquad \dim\ker d(F_G)_{W,\mathrm{active}}=n-c-1+\beta_*.
+\end{equation}
+Inactive parameter blocks contribute their full dimensions separately
+to the kernel, as in Theorem~\ref{thm:arbitrary-support}.
+
+The kernel in Theorem~\ref{thm:arbitrary-support} is the Lie algebra of
+the group
+\[
+ T_G=\left\{t\in(\C^*)^{E_*}:\prod_{e\in M}t_e=1
+          \textnormal{ for every }M\in\mathcal M\right\},
+\]
+which acts by $W_e\mapsto t_eW_e$ and preserves $F_G$. Its identity
+component is a torus of dimension $|E_*|-\rank A$; the group can have
+finitely many further components.
+
+\begin{corollary}\label{cor:restricted-general-support}
+Let $S\subseteq E_*$ be a set of variable edge blocks, while all blocks
+in $E_*\setminus S$ remain in the source and are held fixed when taking
+the differential. Write $A_S$ for the columns of $A$ indexed by $S$ and
+$N_S=\sum_{ij\in S}d_id_j$. The maximum and generic rank of this
+restricted differential, as the full source varies, are
+\[
+ N_S-|S|+\rank A_S.
+\]
+At $W^0$, and at a general full source, its kernel consists precisely
+of $(x_eW_e)_{e\in S}$ with $x\in\ker A_S$. If inactive edges are
+also declared variable, their full coordinate spaces are invisible
+and do not alter the rank.
+\end{corollary}
+\begin{proof}
+Extend a variation supported on $S$ by zero on its complement.
+At $W^0$, Theorem~\ref{thm:arbitrary-support} identifies its kernel
+with those $x\in\ker A$ supported on $S$, which are exactly
+$\ker A_S$. The same edge scalings furnish this many independent
+kernel vectors whenever the variable blocks are nonzero. The
+polynomial-minor argument gives the universal upper bound and the
+witness gives equality generically.
+\end{proof}
+
+\paragraph{Elementary examples.}
+If the active graph has just one perfect matching, $A$ has rank one
+and the dimension is $\sum_{e\in E_*}d_id_j-|E_*|+1$, the usual
+dimension of a product of edge tensors. An even cycle of length
+$n\geq4$ has two perfect matchings, so its dimension is
+$\sum_{e\in E}d_id_j-n+2$. For disconnected active support,
+\eqref{eq:disconnected} says that the image dimensions of the components
+add, with one subtracted for each additional component, as expected for
+their tensor product.
+
+\paragraph{An additional gauge on six vertices.}
+Let $G$ be the union of the complete graphs on $\{1,2,3,4\}$ and
+$\{3,4,5,6\}$, sharing edge $34$. Its eleven edges are all active,
+and its five perfect matchings are
+\[
+ 12|34|56,\quad 12|35|46,\quad 12|36|45,\quad
+ 13|24|56,\quad 14|23|56.
+\]
+Their incidence vectors are independent: edges $34,35,36,13,14$
+occur in just the respective matching. Thus $\rank A=5$ and the
+image dimension is $N_*-6$, equal to $93$ when every $d_i=3$.
+The generic scalar-rescaling kernel has dimension six, whereas vertex
+rescalings give only five dimensions.
+
+An extra rescaling is $W_{13}\mapsto tW_{13}$ and
+$W_{24}\mapsto t^{-1}W_{24}$, with all other blocks fixed: those
+two edges occur together in exactly one matching. Its infinitesimal
+edge weights cannot have the form $\lambda_i+\lambda_j$.
+Indeed, the zero weights on triangle $345$ force
+$\lambda_3=\lambda_4=\lambda_5=0$; edge $36$ then gives
+$\lambda_6=0$, edge $14$ gives $\lambda_1=0$, and edge $23$ gives
+$\lambda_2=0$, contradicting weight $1$ on edge $13$.
+The cut $\delta(\{1,2,3\})$ is tight, and each of its two contractions
+has underlying simple graph $K_4$, with one edge tripled. Thus $\beta(G)=2$,
+in agreement with the brick formula.
+
+
+\section{Complete support and selected edge blocks}\label{sec:complete}
+For $G=K_n$, write $F=F_{K_n}$ and put
+\[
+ \cP=\bigoplus_{i<j}V_i\otimes V_j,\quad
+ \cH=\bigotimes_i V_i,\quad N=\sum_{i<j}d_id_j,\quad
+ \cX=\overline{F(\cP)}.
+\]
+For $\sum_i\lambda_i=0$, the infinitesimal vertex rescaling is
+\begin{equation}\label{eq:gauge}
+ G_W(\lambda)_{ij}=(\lambda_i+\lambda_j)W_{ij}.
+\end{equation}
+It is the differential of the action of
+$T=\{t\in(\C^*)^n:\prod_i t_i=1\}$.
+
+\begin{corollary}\label{thm:main}
+For even $n\geq4$ and $d_i\geq3$, the maximum and generic rank of $dF$ is $N-n+1$. At the padded rank-three point $W^0$ of \eqref{eq:base}, now on every edge of $K_n$, and at a general parameter, the kernel consists exactly of \eqref{eq:gauge} with $\sum_i\lambda_i=0$. The affine dimension of $\cX$ is $N-n+1$ and its projective dimension is $N-n$.
+\end{corollary}
+\begin{proof}
+By Theorem~\ref{thm:arbitrary-support}, it suffices to identify $\ker A$ for $K_n$. If $Ax=0$, comparing two matchings that differ only on four vertices gives
+\[
+ x_{ij}+x_{kl}=x_{ik}+x_{jl}=x_{il}+x_{jk}
+ \quad(i,j,k,l\textnormal{ distinct}).
+\]
+Set $\lambda_1=(x_{12}+x_{13}-x_{23})/2$, define $\lambda_2,\lambda_3$ cyclically, and put $\lambda_i=x_{1i}-\lambda_1$ for $i\geq4$. The relations on $\{1,2,3,i\}$ give $x_{2i}=\lambda_2+\lambda_i$ and $x_{3i}=\lambda_3+\lambda_i$; those on $\{1,2,i,j\}$ then give $x_{ij}=\lambda_i+\lambda_j$ for the remaining pairs. Each matching sum is $\sum_i\lambda_i$, so this sum is zero. The converse is immediate. The map from $\lambda$ to the edge weights is injective: vanishing on the edges of any triangle forces its three values to be zero, and then all remaining values vanish. Thus $\dim\ker A=n-1$.
+\end{proof}
+
+For equal dimension $d\geq3$, the affine dimension is $d^2\binom n2-n+1$. At $d=3$ and $n=4,6,8$, these dimensions are $51,130,245$. The universal rank upper bound also holds for $d_i=2$: on the open set of nonzero blocks the same $n-1$ vertex directions are independent, and the polynomial-minor argument extends the bound everywhere. Attainment for two-dimensional factors requires the separate arguments below.
+
+Let $E'\subseteq\binom{[n]}2$ be the variable edges, retaining all complementary blocks in the source. Let $H=([n],\binom{[n]}2\setminus E')$, let $b(H)$ count its bipartite components, including isolated vertices, write $\mathcal E_H$ for its edge set, and set $\epsilon(H)=1$ if one of those components has unequal part sizes and $0$ otherwise.
+\begin{corollary}\label{thm:edges}
+For $d_i\geq3$, the maximum and generic rank of the selected-edge differential is
+\[
+ \rank dF_{W,E'}=N_{E'}-b(H)+\epsilon(H),\qquad
+ N_{E'}=\sum_{ij\in E'}d_id_j.
+\]
+At a general source its kernel consists exactly of vertex rescalings satisfying
+\begin{equation}\label{eq:complement}
+ \sum_i\lambda_i=0,\qquad \lambda_i+\lambda_j=0\quad(ij\in\mathcal E_H).
+\end{equation}
+The same generic formula holds for $n\geq6$ and $d_i\geq2$.
+\end{corollary}
+\begin{proof}
+Intersect the full generic kernel with the selected-edge parameter subspace. The edge equations in \eqref{eq:complement} have one free parameter on each bipartite component and none on a nonbipartite component: values alternate along paths, and an odd cycle forces zero. This is the standard unsigned-incidence rank calculation \cite[Theorem 8.2.1]{godsil}. On a bipartite component with parts $C_1,C_2$, write the values as $u$ on $C_1$ and $-u$ on $C_2$. The remaining sum equation is
+\[
+ \sum_{(C_1,C_2)}(|C_1|-|C_2|)u_{C_1,C_2}=0,
+\]
+where the sum runs over the bipartite components. Its rank is exactly $\epsilon(H)$. Thus the kernel has dimension $b(H)-\epsilon(H)$. Rescaling directions give the universal upper bound by polynomial minors; the full-kernel witness gives equality. The final assertion uses Theorem~\ref{thm:qubit} below instead of Corollary~\ref{thm:main}.
+\end{proof}
+
+For example, if $E'$ comprises all edges meeting a nonempty vertex set of size $r$, put $t=n-r$. The generic rank is $N_{E'}-\gamma_r$, where $\gamma_r=r$ for $t=1,2$ and $\gamma_r=r-1$ for $t=0$ or $t\geq3$. This follows because $H$ is $K_t$ together with $r$ isolated vertices. This selected-edge calculation retains the full source; the different operation of setting complementary blocks to zero is governed by Theorem~\ref{thm:arbitrary-support}.
+
+\begin{proposition}\label{prop:local}
+At any source with nonzero blocks and kernel exactly the vertex-rescaling directions, $F$ is locally analytically injective modulo vertex rescaling.
+\end{proposition}
+\begin{proof}
+Choose a linear complement $L$ to the orbit tangent space. The derivative at $(1,W)$ of $T\times(W+L)\to\cP$, $(t,Z)\mapsto t\cdot Z$, is an isomorphism. The analytic inverse function theorem gives a local product chart. On the slice $W+L$, choose $\dim L$ output linear coordinates with invertible derivative; the same theorem makes $F$ locally injective there. Equal outputs in the product chart therefore differ by the torus action.
+\end{proof}
+This assertion is local in parameter space; it does not exclude distant preimages. Section~\ref{sec:global-all} proves the global conclusion when all local dimensions are at least three. For $n\geq6$ and every $d_i\geq2$, Theorem~\ref{thm:qubit} supplies the hypothesis of Proposition~\ref{prop:local} at a general source, so local injectivity modulo vertex rescaling holds there as well.
+
+
+\section{Global recovery at every even order}\label{sec:global-all}
+In this section the support is complete, $n\geq4$ is even, and every
+$d_i\geq3$. We prove that a general output determines the entire
+vertex-rescaling orbit, at every such order. The proof uses the
+standard tangent-contact strategy \cite{co,ballico}; the specific
+ingredients are an all-order cofactor-line calculation and a gluing
+argument that permits zero cofactors at an alternative preimage.
+
+For an even set $Y\subseteq[n]$, let $F_Y(W)$ be the matching tensor
+of the blocks with both endpoints in $Y$, and set $F_\varnothing=1$.
+The differential is
+\[
+ dF_W(B)=\sum_{i<j}B_{ij}F_{[n]\setminus\{i,j\}}(W).
+\]
+Every cofactor uses the same source $W$.
+
+
+\begin{lemma}[Cofactor contact lines]\label{lem:all-order-contact}
+Let $n\geq4$ be even and $d_i\geq3$. Put
+$S_W=\operatorname{im}dF_W$ and, for an edge $ij$, define
+\[
+ K_{ij}(S)=\{Z\in\bigotimes_{k\ne i,j}V_k:
+                 (V_i\otimes V_j)\otimes Z\subseteq S\}.
+\]
+At the padded rank-three point $W^0$ of \eqref{eq:base},
+\[
+ K_{ij}(S_{W^0})=\C F_{[n]\setminus\{i,j\}}(W^0).
+\]
+The same equality holds with $W$ in place of $W^0$ on a nonempty
+Zariski-open subset of the full parameter space.
+\end{lemma}
+\begin{proof}
+It suffices to consider $ij=12$. Write $U_i$ for the three-dimensional
+core and $L_i$ for the span of the noncore basis vectors, so
+$V_i=U_i\oplus L_i$.
+Identify all core bases with $e_1,e_2,e_3$ and give them the complex
+bilinear form for which that basis is orthonormal. The same orthogonal
+change of basis at every core fixes every block of $W^0$. Consequently
+it fixes every matching cofactor and preserves $S_0=S_{W^0}$.
+
+We first record an elementary weight argument. Choose distinct core
+indices $p,q$ and let $g(t)$, $t\in\C^*$, multiply $e_p+\mathrm i e_q$
+by $t$, multiply $e_p-\mathrm i e_q$ by $t^{-1}$, and fix the remaining
+core basis vector. Here $\mathrm i^2=-1$. This is orthogonal for the
+complex bilinear form. It acts trivially on every $L_i$. A vector on
+which $g(t)$ acts as $t^w$ has weight $w$. The core $U_i$ has weights
+$-1,0,1$; $U_1\otimes U_2$ has weights $-2,-1,0,1,2$, including
+nonzero vectors of both extreme weights. A stable subspace of a tensor
+product decomposes into these integer weight spaces: in the eigenbasis
+just described, this follows by projecting onto powers of $t$, or by
+a finite Vandermonde argument.
+
+The ambient tensor space is the direct sum of coordinate sectors. For
+$J\subseteq[n]$, the \emph{$J$-sector} is the span of the output words
+that are noncore exactly at the vertices of $J$; it is the tensor
+product of the spaces $L_k$ for $k\in J$ and $U_k$ for $k\notin J$,
+and $g(t)$ preserves it. Every block of $W^0$ lies in the cores, so
+every cofactor of $W^0$ lies in the core sector of its vertices. Split
+a variation of block $kl$ according to
+$V_k\otimes V_l=(U_k\oplus L_k)\otimes(U_l\oplus L_l)$. The
+differential maps the four pieces into single sectors: $U_k\otimes U_l$
+into the core sector, $L_k\otimes U_l$ into the $\{k\}$-sector,
+$U_k\otimes L_l$ into the $\{l\}$-sector and $L_k\otimes L_l$ into the
+$\{k,l\}$-sector. Hence $S_0$ is spanned by vectors that each lie in
+one sector. It is therefore the direct sum of its parts $(S_0)_J$ in
+the $J$-sectors, and $(S_0)_J=0$ when $|J|\geq3$. Since $g(t)$ fixes
+every cofactor of $W^0$, the differential is equivariant, so each
+$(S_0)_J$ is stable and its weights are among those of the pieces
+mapped into it. For $J=\varnothing$ these are the spaces
+$U_k\otimes U_l$, so the weights of $(S_0)_\varnothing$ lie in
+$[-2,2]$. For $J=\{k\}$ they are the spaces $L_k\otimes U_l$, with
+weights in $[-1,1]$. For $J=\{k,l\}$ the only piece is
+$L_k\otimes L_l$, of weight zero.
+
+Let $Z\in K_{12}(S_0)$, and decompose $Z=\sum_JZ_J$ into its parts in
+the sectors, now indexed by sets $J\subseteq\{3,\ldots,n\}$. For
+$\xi\in U_1\otimes U_2$, the part of $\xi\otimes Z$ in the $J$-sector
+is $\xi\otimes Z_J$, so $\xi\otimes Z_J\in(S_0)_J$. If $|J|\geq3$, this
+part is zero for every $\xi$, so $Z_J=0$. The same projection, applied
+to $\xi$ in each of the four pieces of $V_1\otimes V_2$, shows that
+every $Z_J$ lies in $K_{12}(S_0)$. This space is stable under $g(t)$,
+because $V_1\otimes V_2$ and $S_0$ are. So the weight components of
+each $Z_J$ also lie in $K_{12}(S_0)$, and in the $J$-sector.
+
+Suppose that a weight component $z$ of some $Z_J$, of weight $w$, is
+nonzero. Put $f_\pm=e_p\pm\mathrm ie_q$, of weight $\pm1$, and let
+$\xi_\pm$ be $f_\pm\otimes f_\pm$ on slots $1$ and $2$, of weight
+$\pm2$. Then $\xi_+\otimes z$ and $\xi_-\otimes z$ are nonzero vectors
+of weights $w+2$ and $w-2$ in $(S_0)_J$. These two weights differ by
+$4$, so they cannot both lie in $[-1,1]$ or in $\{0\}$. Thus $Z_J=0$
+whenever $|J|=1$ or $|J|=2$. In the core sector, both weights lie in
+$[-2,2]$ only when $w=0$. Therefore $Z=Z_\varnothing$ lies in the core
+sector and is fixed by $g(t)$.
+
+In particular $g(-1)$ fixes $Z$. Since $e_p=(f_++f_-)/2$ and
+$e_q=(f_+-f_-)/(2\mathrm i)$, the element $g(-1)$ negates $e_p$ and
+$e_q$ at every slot and fixes the third core vector. A word in core
+labels is thus multiplied by $(-1)^{c_p+c_q}$, where $c_a$ is the
+number of its labels equal to $a$. Apply this conclusion for the label
+pairs $(p,q)=(1,2)$ and $(p,q)=(1,3)$; here $1,2,3$ are labels, not
+vertices. For any nonzero coefficient of $Z$, both $c_1+c_2$ and
+$c_1+c_3$ are even, so the three label counts have the same parity.
+Three counts of equal parity sum to $n-2$, which is even, so all three
+are even.
+
+Take $\xi=e_{1,1}\otimes e_{2,2}$. The tensor $\xi\otimes Z$ belongs to
+$S_0$ and lies in the core sector, and in each of its words exactly
+the labels $1,2$ have odd counts. Call the parities of $(c_1,c_2,c_3)$
+the \emph{parity class} of a core word. At $W^0$, every
+undifferentiated edge pairs equal labels, so every word of a cofactor
+of $W^0$ has three even counts. A core entry of a varied block, with
+labels $a,b$ at its two endpoints, therefore contributes only words
+whose counts are odd exactly at $a$ and $b$ when $a\ne b$, and all
+even when $a=b$. So the core part of $dF_{W^0}$ is a direct sum over
+parity classes, while noncore entries map into the other sectors.
+Hence only variations with one endpoint labelled $1$ and the other
+labelled $2$ contribute to the parity class of $\xi\otimes Z$. We may
+therefore write
+\[
+ \xi\otimes Z=dF_{W^0}(B)
+\]
+with $B$ having only these off-diagonal core entries. Write $y_{ij}$
+for the entry whose label at vertex $i$ is $1$ and at vertex $j$ is
+$2$, for ordered pairs $i\ne j$.
+
+Inspect the output word with its unique label $1$ at $i$, unique
+label $2$ at $j$, and label $3$ elsewhere. Only the differentiated
+edge $ij$ can cover both singleton labels, so its coefficient is
+$(n-3)!!\,y_{ij}$. In $\xi\otimes Z$ that coefficient is zero unless
+$(i,j)=(1,2)$. Thus every $y_{ij}$ except $y_{12}$ vanishes, and
+\[
+ \xi\otimes Z
+ =y_{12}\, \xi\otimes F_{[n]\setminus\{1,2\}}(W^0).
+\]
+Since $\xi\ne0$, this proves that $Z$ is a scalar multiple of the
+stated cofactor. The reverse inclusion holds because varying edge $12$
+gives every tensor $\xi\otimes F_{[n]\setminus\{1,2\}}(W^0)$ with
+$\xi\in V_1\otimes V_2$. The cofactor is nonzero, for its
+constant-label coefficient is $(n-3)!!$.
+
+Finally Corollary~\ref{thm:main} gives a constant-rank neighborhood of $W^0$,
+on which $W\mapsto S_W$ is a regular Grassmannian map. The space
+$K_{ij}(S_W)$ is the kernel of
+\[
+ \bigotimes_{k\ne i,j}V_k\longrightarrow
+ \operatorname{Hom}(V_i\otimes V_j,\mathcal H/S_W),
+ \qquad Z\longmapsto(\xi\mapsto \xi\otimes Z\bmod S_W).
+\]
+Kernel dimension is upper semicontinuous. It equals one at $W^0$ and
+is at least one where the corresponding matching cofactor is nonzero.
+Intersect these open conditions for all pairs to obtain the generic
+assertion.
+\end{proof}
+
+\begin{lemma}[Injective star maps]\label{lem:generic-star}
+Let $R$ have odd cardinality at least three, and assume $d_i\geq3$.
+For general pair blocks on $R$, the linear map
+\[
+ L_R:\bigoplus_{j\in R}V_j\longrightarrow\bigotimes_{j\in R}V_j,
+ \qquad (x_j)_j\longmapsto\sum_{j\in R}x_jF_{R\setminus\{j\}}(W)
+\]
+is injective. This property is preserved when the blocks on $R$ are
+replaced by $u_i u_jW_{ij}$, where every $u_i\ne0$.
+\end{lemma}
+\begin{proof}
+Adjoin one vertex $v$. At a general complete source on $R\cup\{v\}$,
+Corollary~\ref{thm:main} identifies the full differential kernel as vertex rescaling. Its
+intersection with variations supported on the star of $v$ is zero:
+the zero variations on the complete graph on $R$ imply
+$\lambda_i+\lambda_j=0$ for all $i,j\in R$, since these source blocks
+are nonzero. A triangle gives $\lambda_i=0$ for every $i\in R$;
+the sum condition then gives $\lambda_v=0$. Thus the star-restricted
+differential is injective. It is precisely $1_{V_v}\otimes L_R$,
+and depends only on the blocks on $R$. A maximal minor therefore
+gives a nonempty open set of such blocks where $L_R$ is injective.
+
+Under the stated rescaling,
+\[
+ F_{R\setminus\{j\}}\longmapsto
+ \left(\prod_{i\in R\setminus\{j\}}u_i\right)
+ F_{R\setminus\{j\}}.
+\]
+Every multiplier is nonzero. Rescaling the summands of the domain
+preserves injectivity.
+\end{proof}
+
+\begin{lemma}[Multiplicative compatibility]\label{lem:scalar-gluing}
+Let $s_{ij}\ne0$ be scalars on the edges of a complete graph with at
+least four vertices. If
+\[
+ s_{ij}s_{kl}=s_{ik}s_{jl}=s_{il}s_{jk}
+\]
+for every four distinct vertices, then $s_{ij}=t_it_j$ for some
+nonzero scalars $t_i$. These $t_i$ are unique up to simultaneous sign.
+\end{lemma}
+\begin{proof}
+Choose $t_1^2=s_{12}s_{13}/s_{23}$ and put $t_i=s_{1i}/t_1$ for
+$i\geq2$. The relations on $\{1,2,3,i\}$ yield the products for
+edges through $2$ and $3$, and those on $\{1,2,i,j\}$ yield every
+remaining product. For uniqueness, the ratios of two possible
+solutions have product one on each edge. A triangle forces all
+ratios to be the same sign, and all other vertices have that ratio.
+\end{proof}
+
+\begin{proposition}[The induction step]\label{prop:cofactor-gluing}
+Let $n\geq6$ be even and $d_i\geq3$. Assume Theorem~\ref{thm:global-all-order}
+holds on every complete $(n-2)$-vertex format with these
+dimension bounds. For $W$ in a nonempty Zariski-open set, the
+following implication holds: if
+\[
+ F(W')=F(W),\qquad
+ F_Y(W')=c_YF_Y(W)\quad
+ (|Y|=n-2),\qquad c_Y\in\C,
+\]
+then $W'_{ij}=t_it_jW_{ij}$ with $t_i\ne0$ and $\prod_i t_i=1$.
+In particular, all the initially possibly zero scalars $c_Y$ are
+nonzero.
+\end{proposition}
+\begin{proof}
+For $Y\subseteq[n]$ with
+$|Y|=n-2$, write $\cP_Y$ for the space of blocks with both endpoints in
+$Y$, and $U_Y$ for the set $U$ that
+Theorem~\ref{thm:global-all-order} gives for $K_Y$ with the local
+dimensions $d_i$, $i\in Y$.
+
+\emph{Generic conditions.} Impose the following conditions on $W$.
+\begin{enumerate}
+\item[(i)] Every edge block is nonzero.
+\item[(ii)] For every $|Y|=n-2$, $F_Y(W)$ is nonzero and lies in
+$U_Y$.
+\item[(iii)] For every $R\subseteq[n]$ with $|R|=n-3$, the map $L_R$
+of Lemma~\ref{lem:generic-star} is injective.
+\item[(iv)] $F(W)$ has flattening rank at least two across every pair
+and its complement.
+\end{enumerate}
+Each is a nonempty Zariski-open condition. For (i) this is clear. For
+(ii), $U_Y$ is open in the image closure of $F_Y$, and it is
+contained in the image $F_Y(\cP_Y)$ by the clause of
+Theorem~\ref{thm:global-all-order} that places $U$ inside the image.
+Hence $F_Y^{-1}(U_Y)$ is a nonempty open subset of $\cP_Y$, and so is
+its intersection with the set where $F_Y\ne0$. Pull this set back
+through the restriction map $\cP\to\cP_Y$, which is linear and
+surjective. For (iii), $|R|=n-3$ is odd and at least three, so
+Lemma~\ref{lem:generic-star} gives a nonempty open set of blocks on
+$R$; pull it back in the same way. For (iv), at $W^0$ take the two
+rows with pair labels $11,22$ and the two columns with all
+complementary labels $1$ or all $2$. Since the blocks of $W^0$ pair
+equal labels, each entry counts perfect matchings: it is $(n-1)!!$
+when the pair and its complement carry the same label, and $(n-3)!!$,
+with the pair matched to itself, when they differ. The minor is
+\[
+ \det\begin{pmatrix}(n-1)!!&(n-3)!!\\
+                     (n-3)!!&(n-1)!!\end{pmatrix}>0.
+\]
+The parameter space is irreducible, so the finitely many conditions
+intersect in a nonempty open set. In particular $F(W)\ne0$.
+
+\emph{Step 1 (Euler).} The map $F$ is homogeneous of degree $n/2$, so
+Euler's identity gives
+\[
+ \frac n2F(W')=\sum_e W'_eF_{[n]\setminus e}(W').
+\]
+Since $F(W')=F(W)\ne0$, some $F_Y(W')=c_YF_Y(W)$ is nonzero, and
+$c_Y\ne0$. Fix such a $Y$, and write $[n]\setminus Y=\{p,q\}$.
+
+\emph{Step 2 (nonzero constants).} Let $|Y'|=n-2$ with $c_{Y'}\ne0$,
+and choose a scalar $z$ with $z^{(n-2)/2}=c_{Y'}$. Since $F_{Y'}$ is
+homogeneous of degree $(n-2)/2$, the source $z^{-1}W'|_{Y'}$ has
+output $F_{Y'}(W)$, which lies in $U_{Y'}$ by (ii). The assumed case of
+Theorem~\ref{thm:global-all-order} describes every preimage of a point
+of $U_{Y'}$, with no condition on the preimage, so $z^{-1}W'|_{Y'}$ is
+a vertex rescaling of $W|_{Y'}$. The additional common edge multiplier
+$z$ can be absorbed by a square root in the vertex factors.
+Consequently $W'_{ij}=u_iu_jW_{ij}$ for all $i,j\in Y'$, with nonzero
+$u_i$ depending on $Y'$; in particular all these blocks are nonzero.
+Applying this to $Y$ recovers all its edge lines and their
+vertex-compatible scalars.
+
+\emph{Step 3 (zero or full star).} Fix $v\in\{p,q\}$, and for $i\in Y$
+put $Y'_i=(Y\setminus\{i\})\cup\{v\}$. If $c_{Y'_i}=0$, expansion of
+$F_{Y'_i}(W')=0$ at $v$ gives
+\[
+ 0=\sum_{j\in Y\setminus\{i\}}
+ W'_{vj}F_{Y\setminus\{i,j\}}(W').
+\]
+The right side is $1_{V_v}\otimes L_R$, for $R=Y\setminus\{i\}$,
+applied to the blocks $W'_{vj}$, with $L_R$ formed from the blocks of
+$W'$ on $R$. By Step 2 these blocks are $u_au_bW_{ab}$, so (iii) and
+Lemma~\ref{lem:generic-star} make $L_R$ injective. Thus $W'_{vj}=0$
+for all $j\in Y\setminus\{i\}$. If instead $c_{Y'_i}\ne0$, Step 2
+makes all these blocks nonzero.
+
+Suppose that $W'_{vj_0}\ne0$ for some $j_0\in Y$. For every
+$i\in Y\setminus\{j_0\}$ the set $Y\setminus\{i\}$ contains $j_0$, so
+$c_{Y'_i}=0$ is impossible, and $c_{Y'_i}\ne0$. Two distinct such $i$
+exist because $|Y|=n-2\geq4$, and their sets $Y\setminus\{i\}$ cover
+$Y$. Hence every block from $v$ to $Y$ is nonzero. Then
+$Y\setminus\{j_0\}$ also contains some $j$ with $W'_{vj}\ne0$, so
+$c_{Y'_{j_0}}\ne0$ too. Otherwise every $W'_{vj}$ with $j\in Y$
+vanishes. Then $pq$ is the only possibly nonzero edge through $v$, and
+$F(W')=W'_{pq}F_Y(W')$ has flattening rank at most one across
+$pq\mid Y$. This contradicts (iv), since $F(W')=F(W)$. Thus, for both
+outside vertices $v$, every block from $v$ to $Y$ is nonzero and every
+$c_{Y'_i}$ is nonzero.
+
+\emph{Step 4 (quartets).} By Steps 2 and 3, every block of $W'$ other
+than the one on $pq$ is recovered as $W'_e=s_eW_e$ with $s_e\ne0$, and
+on $Y$ and on every $Y'_i$ the multipliers have the form
+$s_{ij}=u_iu_j$. They therefore satisfy the four-vertex multiplicative
+relations on every quartet contained in one of these sets. Every
+quartet in $Y\cup\{v\}$ is so contained. A quartet containing $v$ has
+its other three vertices in $Y$; because $|Y|=n-2\geq4$, some $i\in Y$
+lies outside those three, and the quartet lies in $Y'_i$.
+Lemma~\ref{lem:scalar-gluing} gives vertex factors on $Y\cup\{p\}$
+and on $Y\cup\{q\}$. Their restrictions to $Y$ differ by at most
+simultaneous sign, so align that sign. We obtain factors $t_i$ on all
+vertices satisfying $s_{ij}=t_it_j$ for every recovered edge, with
+only $pq$ still unrecovered.
+
+\emph{Step 5 (the last edge $pq$).} Put $s=\prod_i t_i$ and
+$D=W'_{pq}/(t_pt_q)$, without assuming that $D$ is nonzero or
+proportional to $W_{pq}$. The matching map is linear in the block on
+$pq$, so the recovered blocks give
+\[
+ F(W')=s\bigl(F(W)+(D-W_{pq})F_Y(W)\bigr).
+\]
+Thus
+\[
+ (1-s)F(W)=s(D-W_{pq})F_Y(W).
+\]
+If $s\ne1$, the left side has flattening rank at least two across
+$pq\mid Y$, whereas the right side has rank at most one. Hence
+$s=1$. Since $F_Y(W)\ne0$, tensor multiplication by it is injective,
+and the remaining equality gives $D=W_{pq}$.
+
+Every block of $W'$ is therefore $t_it_jW_{ij}$ and
+$\prod_i t_i=1$. Each cofactor $F_{Y'}(W')$ is $F_{Y'}(W)$ multiplied
+by the nonzero scalar $\prod_{i\in Y'}t_i$, proving the final
+assertion.
+\end{proof}
+
+
+\begin{theorem}[Global generic recovery]\label{thm:global-all-order}
+Let $G=K_n$ (complete support), let $n\geq4$ be even and let every
+$d_i\geq3$. There is a nonempty
+Zariski-open subset $U\subseteq\cX$ contained in the image of $F$
+such that, for every $\omega\in U$, the entire fibre is a single
+vertex-rescaling orbit:
+\[
+ F^{-1}(\omega)=\{(t_it_jW_{ij})_{i<j}:t_i\in\C^*,\ \prod_i t_i=1\}
+ \qquad(W\in F^{-1}(\omega)).
+\]
+Every labelled perfect-matching summand is therefore uniquely
+determined by a general output.
+\end{theorem}
+\begin{proof}
+We induct on the even order, for all dimension vectors with $d_i\geq3$.
+At every order impose nonzero blocks, maximal differential rank,
+the cofactor contact-line identities of
+Lemma~\ref{lem:all-order-contact}, and smoothness of $F(W)$ in
+$\cX$. These are nonempty open conditions: maximal rank and contact
+lines hold at $W^0$, and smooth output is a nonempty open condition
+because $F$ is dominant onto its irreducible image closure.
+Their intersection is nonempty by irreducibility of the parameter
+space. Write $S_W=\operatorname{im}dF_W$. At a source in this
+intersection,
+\[
+ S_W=T_{F(W)}\cX.
+\]
+Indeed, $F$ maps the whole parameter space $\cP$ into $\cX$, so every
+polynomial vanishing on $\cX$ pulls back to zero on $\cP$, and $dF_W$
+takes values in the Zariski tangent space $T_{F(W)}\cX$. As $F(W)$ is
+a smooth point, this space has dimension $\dim\cX$, which is the
+maximal rank $\dim S_W$ by Corollary~\ref{thm:main}.
+For any other preimage $W'$ of the same output, the same argument at
+$W'$, which needs no condition on $W'$, shows that its differential
+takes values in $T_{F(W')}\cX=T_{F(W)}\cX=S_W$. Varying only block
+$ij$ gives
+\[
+ (V_i\otimes V_j)\otimes F_{[n]\setminus\{i,j\}}(W')
+ \subseteq S_W.
+\]
+The contact-line lemma therefore implies
+\begin{equation}\label{eq:all-order-proportional-cofactors}
+ F_Y(W')=c_YF_Y(W),\qquad c_Y\in\C,
+ \qquad |Y|=n-2,
+\end{equation}
+without presupposing that any $c_Y$ is nonzero.
+
+For $n=4$, these are precisely proportionalities of the six edge
+blocks. Impose in addition independence of the three matching
+summands $W_{12}W_{34}$, $W_{13}W_{24}$, and $W_{14}W_{23}$.
+This is a nonempty open condition: at $W^0$, their coefficients at
+words $1122$, $1212$, and $1221$ form the identity matrix.
+Writing $W'_{ij}=s_{ij}W_{ij}$, the equality of the output tensors
+then forces
+\[
+ s_{12}s_{34}=s_{13}s_{24}=s_{14}s_{23}=1.
+\]
+All six scalars are nonzero. Lemma~\ref{lem:scalar-gluing} expresses
+them as $t_it_j$, and the product on any matching gives
+$\prod_i t_i=1$. Thus the entire fibre is one orbit in the base case.
+
+For $n\geq6$, assume the theorem at order $n-2$ and intersect the
+preceding parameter-open set with the nonempty open set supplied by
+Proposition~\ref{prop:cofactor-gluing}. Every alternative preimage
+satisfies \eqref{eq:all-order-proportional-cofactors}, so that
+proposition gives $W'_{ij}=t_it_jW_{ij}$ and $\prod_i t_i=1$.
+Conversely these rescalings preserve every matching term.
+
+At each order, the good parameter-open set has dense constructible
+image under $F$, and hence its image contains a nonempty Zariski-open
+subset of $\cX$. Taking that subset for $U$ proves the stated
+general-output quantifier and completes the induction.
+\end{proof}
+
+\begin{corollary}[Rational normalization]\label{cor:rational-all-order}
+For even $n\geq4$ and $d_i\geq3$, a representative of the unique
+vertex-rescaling orbit over a general output depends rationally on
+that output. In particular all edge lines and every labelled matching
+summand are rationally determined by the output.
+\end{corollary}
+\begin{proof}
+Write $n=2m$. Choose a spanning tree $\Gamma$ of $K_n$ whose
+bipartition $Y_-\sqcup Y_+$ has sizes $m-1$ and $m+1$. Such a tree
+exists: join one vertex of $Y_-$ to every vertex of $Y_+$, and join
+every remaining vertex of $Y_-$ to one fixed vertex of $Y_+$. For each
+tree edge $e$, choose a nonzero linear functional $\ell_e$ on its block
+space. Let $\Omega$ be the parameter-open set where
+$a_e=\ell_e(W_e)\ne0$ for all $e\in\Gamma$, and work first on $\Omega$.
+
+Fix a root in $Y_-$. The equations $t_it_j a_{ij}=1$ on tree edges
+determine the vertex factors recursively in the form
+\[
+ t_i=z r_i\quad(i\in Y_-),\qquad
+ t_j=z^{-1}r_j\quad(j\in Y_+),
+\]
+where the root has $r_i=1$ and every other $r_i$ is a nonzero rational
+monomial in the $a_e$. Put $\rho=\prod_i r_i$. Since
+$|Y_-|-|Y_+|=-2$, the additional condition $\prod_i t_i=1$ is
+precisely $z^2=\rho$. Its two choices give the same action on edge
+blocks. Indeed, their products are the rational functions
+\[
+ t_it_j=
+ \begin{cases}
+ \rho r_ir_j,&i,j\in Y_-,\\
+ \rho^{-1}r_ir_j,&i,j\in Y_+,\\
+ r_ir_j,&i\in Y_-,\ j\in Y_+.
+ \end{cases}
+\]
+This gives a rational normalization into the affine slice
+\[
+ \Pi=\{W:\ell_e(W_e)=1\quad(e\in\Gamma)\},
+ \qquad \dim\Pi=N-n+1.
+\]
+
+For $e=ij$ we have $a_e(t\cdot W)=t_it_ja_e(W)$, so the condition
+$a_e\ne0$ is invariant on orbits, and $\Omega$ is a union of orbits.
+Each orbit in $\Omega$ meets $\Pi$ in exactly one point. To check
+uniqueness, a rescaling preserving all tree normalizations satisfies
+$t_it_j=1$ on $\Gamma$, hence is $z$ on $Y_-$ and $z^{-1}$ on $Y_+$.
+Its total product is $z^{-2}$, so $z=\pm1$. Both choices act trivially
+on every edge block.
+
+The restriction $F|_\Pi:\Pi\to\cX$ is dominant: the rational
+normalization does not change $F$, so $F(\Pi)=F(\Omega)$, and $\Omega$
+is a dense parameter-open set. The general fibre of $F|_\Pi$ is a
+single point.
+Indeed, $F(\Omega)$ is constructible and dense in $\cX$, so it contains
+a nonempty open subset $U'$ of $\cX$. Take $\omega\in U\cap U'$, with
+$U$ from Theorem~\ref{thm:global-all-order}. The fibre $F^{-1}(\omega)$
+is one orbit, and it meets $\Omega$ because $\omega\in F(\Omega)$. So
+it meets $\Pi$ in exactly one point, which is the fibre of $F|_\Pi$
+over $\omega$. Moreover $\Pi$ is an affine space, hence irreducible,
+of dimension $N-n+1=\dim\cX$ by Corollary~\ref{thm:main}. In
+characteristic zero, this dominant map between irreducible varieties
+of the same dimension is therefore birational. Its rational inverse
+is the required normalized representative. Edge lines and labelled
+matching products are invariant under the vertex rescalings, so they
+are rational functions of that representative and hence of the output.
+\end{proof}
+
+The assertion is birational existence. It does not supply defining
+equations of the output variety or an efficient numerical recovery
+algorithm, and it is not asserted on the exceptional output locus.
+
+\section{Two-dimensional local spaces from six vertices onward}
+\label{sec:qubits}
+
+The three-label hypothesis in the complete-support dimension calculation
+can be removed when there are at least six vertices. The new argument uses diagonal
+two-label blocks, but with edge weights that vary. Its all-order step
+reduces a differential relation to its restrictions on eight vertices.
+
+\begin{theorem}\label{thm:qubit}
+Let $n\geq6$ be even and let $\dim V_i=d_i\geq2$. Put
+$N=\sum_{i<j}d_id_j$. Then
+\[
+ \rank dF_W\leq N-n+1
+ \quad(W\in\cP),\qquad
+ \dim\cX=N-n+1.
+\]
+At a general parameter point,
+\[
+ \ker dF_W=
+ \{((\lambda_i+\lambda_j)W_{ij})_{i<j}:
+        \textstyle\sum_i\lambda_i=0\}.
+\]
+A point attaining this rank can be chosen with every block diagonal
+inside fixed two-dimensional subspaces of the $V_i$.
+\end{theorem}
+
+The torus argument already proves the universal bound and shows that
+one point attaining it suffices. We construct such a point first for
+$d_i=2$ and then control all additional parameter directions by padding.
+
+\subsection{The two parity blocks}
+Choose bases $e_{i,0},e_{i,1}$ and set
+\[
+ W_{ij}=a_{ij}e_{i,0}\otimes e_{j,0}
+       +b_{ij}e_{i,1}\otimes e_{j,1}.
+\]
+An output word is specified by the set $S$ of its vertices carrying
+label $1$. Write $h_a(U)$ and $h_b(U)$ for the scalar hafnians on an
+even vertex set $U$, with $h_a(\varnothing)=h_b(\varnothing)=1$.
+All undifferentiated edges pair equal labels. Consequently diagonal
+variations contribute only to even-cardinality $S$, and off-diagonal
+variations only to odd-cardinality $S$. The differential is the direct
+sum of these two blocks. Each has $2\binom n2$ columns.
+
+\begin{lemma}\label{lem:qubit-diagonal}
+For even $n\geq6$, the diagonal block at $a_{ij}=b_{ij}=1$ has rank
+$2\binom n2-n+1$.
+\end{lemma}
+\begin{proof}
+Let $x_{ij},z_{ij}$ be a diagonal kernel variation: $x_{ij}$ varies the
+label-$0$ entry $a_{ij}$, the coefficient of $e_{i,0}\otimes e_{j,0}$,
+and $z_{ij}$ varies the label-$1$ entry $b_{ij}$, the coefficient of
+$e_{i,1}\otimes e_{j,1}$. Put $\sigma_x=\sum_{i<j}x_{ij}$ and
+$D_i^x=\sum_{j\ne i}x_{ij}$, and similarly for $z$. The two constant
+output words give $\sigma_x=\sigma_z=0$.
+In the word with ones exactly at $i,j$, the differentiated edge is
+either $ij$, with the remaining zeros matched in $(n-3)!!$ ways, or an
+edge $kl$ disjoint from $ij$, with $ij$ matched and the remaining zeros
+matched in $(n-5)!!$ ways. Its coefficient therefore gives
+\[
+ (n-3)!!\,z_{ij}+(n-5)!!\sum_{kl\cap ij=\varnothing}x_{kl}=0.
+\]
+Since $\sum_{kl\cap ij=\varnothing}x_{kl}=\sigma_x-D_i^x-D_j^x+x_{ij}$
+and $\sigma_x=0$, division by $(n-5)!!$ gives the first equation below;
+the words with zeros exactly at $i,j$ give the second in the same way:
+\[
+ (n-3)z_{ij}=D_i^x+D_j^x-x_{ij},\qquad
+ (n-3)x_{ij}=D_i^z+D_j^z-z_{ij}.
+\]
+For $v=x-z$, subtraction yields
+$(n-4)v_{ij}=-D_i^v-D_j^v$. Since $\sum_iD_i^v=0$, summing over
+$j\ne i$ gives $(2n-6)D_i^v=0$. Thus $D_i^v=0$ and then $v=0$.
+It follows that
+\[
+ (n-2)x_{ij}=D_i^x+D_j^x.
+\]
+Setting $\lambda_i=D_i^x/(n-2)$ gives
+$x_{ij}=z_{ij}=\lambda_i+\lambda_j$ and $\sum_i\lambda_i=0$.
+Conversely these are gauge directions, proving the claim.
+\end{proof}
+
+In particular, maximal rank of this block is a nonempty Zariski-open
+condition even on the affine family $a=1$, with $b$ arbitrary.
+
+\subsection{A local test on eight vertices}
+Set $a_{ij}=1$. For an ordered pair $i\ne j$, let $y_{ij}$ denote the
+off-diagonal variation whose label at $i$ is $1$ and whose label at $j$
+is $0$. For odd $S$, its output coefficient is
+\begin{equation}\label{eq:qubit-odd}
+ (n-|S|-2)!!
+ \sum_{\substack{i\in S\\j\notin S}}h_b(S\setminus\{i\})y_{ij}.
+\end{equation}
+Indeed, after choosing the differentiated edge, the remaining ones
+are matched with $b$-weights and the remaining zeros with weights $1$.
+The double factorial is nonzero, including $(-1)!!=1$.
+
+Suppose $y$ is in the kernel. Singleton sets $S=\{i\}$ give
+$\sum_{j\ne i}y_{ij}=0$. Substitute these singleton equations, in the
+form $\sum_{l\notin S}y_{il}=-y_{ij}-y_{ik}$, into
+\eqref{eq:qubit-odd} for $S=\{i,j,k\}$, where $h_b(\{j,k\})=b_{jk}$,
+and divide by $-(n-5)!!$. This gives
+\begin{equation}\label{eq:qubit-triangle}
+ b_{jk}(y_{ij}+y_{ik})+
+ b_{ik}(y_{ji}+y_{jk})+
+ b_{ij}(y_{ki}+y_{kj})=0.
+\end{equation}
+For an eight-element set $U$, let $T_U(b)$ be the square matrix of all
+these equations on $U$: its rows are the $56$ triples, its columns are
+the $56$ directed edges, and
+\[
+ T_U(b)_{S,(i,j)}=
+ \begin{cases}
+ b_{S\setminus\{i\}},&i,j\in S,\\
+ 0,&\textnormal{otherwise}.
+ \end{cases}
+\]
+Here the subscript in the first case is the two-element edge
+$S\setminus\{i\}$.
+
+The following explicit specialization proves that $\det T_{[8]}$ is a
+nonzero polynomial. Put $b_{ij}=1$ on
+\begin{equation}\label{eq:qubit-eight-edges}
+ \{12,14,17,18,23,26,27,28,35,36,37,38,45,47,48,56,58,68\}
+\end{equation}
+and zero elsewhere. With triples ordered lexicographically and directed
+edges ordered lexicographically by their first and then second endpoint,
+\begin{equation}\label{eq:qubit-eight-det}
+ \det T_{[8]}=-262144=-2^{18}.
+\end{equation}
+These are integer entries, and the accompanying standalone verifier
+computes the determinant by fraction-free elimination with every division
+checked exact. Thus this is a finite nonzero-minor certificate, rather
+than a floating point rank estimate.
+
+For any $n\geq8$, each polynomial $\det T_U$ on an eight-element subset
+is nonzero by relabeling this specialization. Their finite product is
+nonzero. On the resulting nonempty open subset of the $b$-parameter
+space, equation~\eqref{eq:qubit-triangle} forces the restriction of $y$
+to every such $U$ to vanish. Every directed edge belongs to some $U$;
+hence the off-diagonal block is injective.
+
+The open condition just obtained intersects the nonempty diagonal
+maximal-rank condition of Lemma~\ref{lem:qubit-diagonal}, since the
+affine $b$-parameter space is irreducible. At a point in their
+intersection the full differential rank is
+\[
+ \left(2\binom n2-n+1\right)+2\binom n2
+ =4\binom n2-n+1.
+\]
+The single eight-vertex certificate therefore proves the claim for
+every even $n\geq8$.
+
+\subsection{The six-vertex certificate}
+\begin{remark}\label{rem:six-vertex}
+At six vertices, keeping $a_{ij}=1$ in the diagonal family cannot give
+the full rank $55$: the full differential of $F$ at such a point has rank at most $51$ for every $b$.
+To see the obstruction, put
+\[
+ L_i(y)=\sum_{j\ne i}y_{ij},\qquad
+ T_{ijk}(y)=b_{jk}(y_{ij}+y_{ik})+
+ b_{ik}(y_{ji}+y_{jk})+b_{ij}(y_{ki}+y_{kj}).
+\]
+The singleton and triple rows of the odd block span the same space as
+the six $L_i$ and the twenty $T_{ijk}$: a singleton row is $3L_i$,
+while the row for $\Theta=\{i,j,k\}$ is
+$\sum_{r\in\Theta}b_{\Theta\setminus\{r\}}L_r-T_{ijk}$.
+For a five-element set $S$ with complement $\{v\}$, its row is
+\[
+ R_S=\sum_{i\in S}h_b(S\setminus\{i\})y_{iv}
+ =\sum_{i\in S}h_b(S\setminus\{i\})L_i
+  -\sum_{\substack{\Theta\subseteq S\\|\Theta|=3}}b_{S\setminus\Theta}T_\Theta.
+\]
+Indeed, the coefficient of $y_{ij}$ in the last sum is
+$h_b(S\setminus\{i\})$ when $i,j\in S$, by expanding that four-vertex
+hafnian along $j$, and is zero otherwise. Thus all odd rows lie in a
+space of dimension at most $6+20=26$. The diagonal block has rank at
+most $25$ by its five independent vertex-rescaling directions. This
+proves the bound $51$ and explains why the six-vertex construction must
+allow both $a$ and $b$ to vary.
+\end{remark}
+
+
+For $n=6$, allow both $a$ and $b$ to vary. The odd block has rows the
+$32$ odd subsets $S\subseteq[6]$, columns the $30$ directed edges, and
+entries
+\begin{equation}\label{eq:qubit-six-matrix}
+ M_{S,(i,j)}=
+ \begin{cases}
+ h_b(S\setminus\{i\})h_a(S^c\setminus\{j\}),
+       &i\in S,\ j\notin S,\\
+ 0,&\textnormal{otherwise}.
+ \end{cases}
+\end{equation}
+Take $a_{ij}=1$ on
+\[
+ \{12,14,24,26,34,35,36,46,56\},
+\]
+take $b_{ij}=1$ on
+\[
+ \{13,15,16,24,25,26,34,45\},
+\]
+and take all other entries zero. Order the rows by cardinality and then
+lexicographically, and order the directed columns lexicographically.
+Delete the two rows $S=\{3,4,6\}$ and $S=\{3,5,6\}$. The resulting
+$30\times30$ minor has exact determinant
+\begin{equation}\label{eq:qubit-six-det}
+ 128=2^7.
+\end{equation}
+The accompanying verifier also specifies and checks this entire matrix.
+Thus odd-block injectivity is a nonempty open condition in the
+$(a,b)$-parameter space. It intersects the nonempty open condition
+where the diagonal block has rank $25$, giving total rank $55$.
+The sparse specialization certifying the odd block need not itself
+maximize the diagonal block; it is the intersection of the two open
+conditions that supplies the common full-rank point.
+
+\subsection{Padding and completion of the proof}
+Choose a full-rank diagonal qubit point as above, also requiring every
+$h_a([n]\setminus\{i,j\})$ and $h_b([n]\setminus\{i,j\})$ to be
+nonzero. This additional nonempty open condition is compatible with
+the preceding ones: each of these polynomials is nonzero at $a=b=1$.
+Embed the two-dimensional cores into the $V_i$ and pad the source
+blocks by zero. Let $B$ be in the differential kernel at the padded point.
+
+Suppose $\alpha$ is a noncore label at $i$ and $c\in\{0,1\}$ is a
+core label at $j$. Inspect the word with labels $\alpha$ at $i$, $c$ at
+$j$, and $1-c$ everywhere else. Any nonzero term must differentiate
+an edge incident to $i$. Unless that edge is $ij$, the remaining label
+$c$ is a singleton and cannot be matched by a diagonal source block.
+The coefficient is therefore $B_{ij}^{\alpha c}$ times the nonzero
+complementary hafnian in color $1-c$. Hence $B_{ij}^{\alpha c}=0$.
+The same argument applies with the endpoints reversed.
+
+For two noncore labels at $i,j$, use them at those vertices and one
+fixed core label everywhere else. Only the differentiated edge $ij$
+can cover both noncore labels. Its complementary hafnian is nonzero,
+so that variation entry also vanishes. All variation entries outside
+the qubit core have now vanished. The remaining variation belongs to
+the qubit kernel and is precisely a vertex rescaling with total weight
+zero. This proves the full rank at the padded point. The universal
+bound, generic-kernel conclusion, and image dimension follow as in
+Corollary~\ref{thm:main}, proving Theorem~\ref{thm:qubit}.
+
+Corollary~\ref{thm:edges} uses this theorem for its rank formula with
+$d_i\geq2$ and $n\geq6$; that formula restricts the differential at a
+general complete-graph source, and asserts no dimension formula for a
+source whose blocks outside a prescribed graph are zero.
+
+\subsection{A two-dimensional obstruction on sparse support}
+\begin{proposition}\label{prop:degree-three-shear}
+Let $r$ be a vertex of degree three in a support graph, with neighbours
+$a<b<c$, and suppose that $ab,ac,bc$ are edges. If $\dim V_r=2$, write
+$W_{rj}=e_0\otimes u_j+e_1\otimes v_j$, with the $r$ slot placed first,
+and set $D_{ij}=u_i\otimes v_j-v_i\otimes u_j$. The variation
+\[
+ B_{bc}=D_{bc},\qquad B_{ac}=-D_{ac},\qquad B_{ab}=D_{ab},
+ \qquad B_e=0\quad(e\notin\{ab,ac,bc\})
+\]
+defines an additive symmetry: $F_G(W+sB)=F_G(W)$ for every $s\in\C$.
+\end{proposition}
+\begin{proof}
+A matching contains at most one of $ab,ac,bc$. If it contains $bc$,
+then $r$ must be matched to $a$, because its other two neighbours are
+occupied; the other cases are analogous. Therefore the entire change is
+\[
+ s\bigl(W_{ra}D_{bc}-W_{rb}D_{ac}+W_{rc}D_{ab}\bigr)
+ F_{G-\{r,a,b,c\}}(W)=0.
+\]
+The parenthesized tensor vanishes by expansion in $e_0,e_1$, exactly as
+in the four-vertex shear of Lemma~\ref{lem:root-shear} below. The
+root-incident blocks are fixed by the
+variation, so $B$ itself remains unchanged along this additive action.
+\end{proof}
+
+\begin{remark}\label{ex:sparse-qubit-failure}
+The complete-support hypothesis in the two-dimensional theorem cannot
+be dropped. Take $G=K_6-\{46,56\}$, so vertex $6$ has neighbours
+$1,2,3$. All thirteen edges are active. Its nine perfect matchings
+have an incidence matrix of rank eight, giving five independent
+matching-preserving scalar directions. These are precisely the vertex
+directions, since their map is injective and their dimension is five.
+The shear of Proposition~\ref{prop:degree-three-shear} is generically
+independent of them: its block on $12$ is generically not proportional
+to the independent parameter $W_{12}$. Consequently
+\[
+ \rank d(F_G)_W\leq N_*-6
+\]
+at every parameter, by the dense-open polynomial-minor argument.
+For six qubits $N_*=52$, so this bound is $46$, strictly below the
+putative graph formula $52-13+8=47$. If only vertex $6$ is
+two-dimensional and all other dimensions are three, the corresponding
+bound is $102$, strictly below $108-13+8=103$.
+\end{remark}
+
+
+\section{The sharp four-vertex boundary}
+\label{sec:four}
+Let $n=4$, let every $d_i\geq2$, and put
+$k=|\{i:d_i=2\}|$. Write $N=\sum_{i<j}d_id_j$.
+
+\begin{theorem}\label{thm:sharp-four}
+If $0\leq k\leq3$, the maximum and generic differential rank of $F$ is
+\[
+ \rank dF=N-3-k.
+\]
+At a general parameter point, its kernel is the span of the three independent
+vertex-rescaling directions and one additional direction for every
+two-dimensional vertex, specified before Lemma~\ref{lem:root-shear}. If $k=4$, the differential is
+generically surjective, of rank $16$ and kernel dimension $8$.
+Consequently these ranks are also the affine dimensions of the image
+closures. In particular, the all-qubit image closure is the entire tensor
+space.
+\end{theorem}
+
+For a two-dimensional vertex $r$, fix a basis $e_0,e_1$ and write its
+incident blocks, with the $r$ slot first, as follows; the notation
+$W_{rj}$ here incorporates the flip when $j<r$:
+\[
+ W_{rj}=e_0\otimes u_j+e_1\otimes v_j.
+\]
+For the remaining vertices $a<b<c$, put
+$D_{ij}=u_i\otimes v_j-v_i\otimes u_j$ and define $S_r(W)$ by
+\[
+ (S_r)_{bc}=D_{bc},\qquad
+ (S_r)_{ac}=-D_{ac},\qquad
+ (S_r)_{ab}=D_{ab},\qquad (S_r)_{rj}=0.
+\]
+
+\begin{lemma}\label{lem:root-shear}
+For every parameter point and every scalar $s$,
+$F(W+sS_r(W))=F(W)$.
+\end{lemma}
+\begin{proof}
+Every four-vertex matching has one edge through $r$ and one edge away
+from $r$, so the change is exactly
+\[
+ s\bigl(W_{ra}D_{bc}-W_{rb}D_{ac}+W_{rc}D_{ab}\bigr).
+\]
+The coefficients of both $e_0$ and $e_1$ vanish by expansion: each is a
+three-by-three determinant with two repeated rows, interpreted in the
+three remaining tensor slots. Thus $S_r(W)\in\ker dF_W$. The incident
+blocks stay fixed under the change, so this also defines an additive
+one-parameter action, not merely an infinitesimal relation.
+\end{proof}
+
+\begin{lemma}\label{lem:triple-injectivity}
+For arbitrary vector spaces $A,B,C$ of dimensions at least two, the map
+\[
+ (x,y,z)\longmapsto x\otimes W_{BC}+y\otimes W_{AC}
+                         +z\otimes W_{AB}
+\]
+from $A\oplus B\oplus C$ to $A\otimes B\otimes C$ is injective for
+general choices of the three pair tensors. Tensor factors are placed in
+the displayed order.
+\end{lemma}
+\begin{proof}
+It suffices to give one witness. Choose distinct basis labels $0,1$ in
+each space and take
+\[
+ W_{BC}=e_{B,0}\otimes e_{C,0},\quad
+ W_{AC}=e_{A,1}\otimes e_{C,1},\quad
+ W_{AB}=e_{A,0}\otimes e_{B,1}.
+\]
+The three summands have pairwise disjoint coordinate supports: the first
+and second differ in their fixed $C$ label; the first and third in their
+fixed $B$ label; and the second and third in their fixed $A$ label. Each
+summand separately is injective. Nonvanishing of a maximal minor then
+gives a nonempty Zariski-open set of injective maps.
+\end{proof}
+
+\begin{lemma}\label{lem:four-padding}
+Suppose a dimension vector with fixed set of two-dimensional vertices
+has maximum differential rank $N-3-k$, and the $3+k$ displayed kernel
+directions are generically independent. Increasing any dimension that
+is already at least three preserves both assertions, with the new $N$.
+\end{lemma}
+\begin{proof}
+First increase $d_v$ by one. Choose a point at which the old differential
+has maximum rank, the known kernel directions are independent, and the
+map in Lemma~\ref{lem:triple-injectivity} on the other three vertices is
+injective. All three are nonempty open conditions in the same affine
+parameter space, hence they hold simultaneously somewhere.
+
+Embed every block by zero-padding its new $v$ coordinate. The new
+differential splits into the old output sector and the sector with the
+new $v$ label. Variations in old parameter coordinates give exactly the
+old differential. The only variations contributing to the new sector
+are the new rows of the three blocks incident to $v$; their map is the
+one in Lemma~\ref{lem:triple-injectivity}. Hence the differential rank
+increases by $\sum_{j\ne v}d_j$, exactly the increase in $N$.
+
+The old coordinate restrictions of every rescaling and every $S_r$
+are unchanged by this padding. Their independence therefore persists.
+Generic independence supplies $3+k$ kernel directions on a nonempty
+open set, so the rank is at most $N-3-k$ there. Polynomial minors extend
+this upper bound to every point. The lower bound just obtained is
+therefore sharp. Repeat for any desired dimension increases.
+\end{proof}
+
+\begin{lemma}\label{lem:four-independence}
+If $k\leq3$, the three gauge directions and the $k$ root directions
+$S_r(W)$ are independent at a general point.
+\end{lemma}
+\begin{proof}
+For each two-dimensional root $r$, choose an edge $ij$ disjoint from
+$r$ that contains every other two-dimensional vertex. Such an edge
+exists because there are at most two other such vertices. Every
+$S_s$ with $s\ne r$ vanishes on this edge. Generically,
+$D_{ij}^{(r)}$ is not proportional to $W_{ij}$: the latter block is an
+independent parameter from the two root-incident blocks that define
+$D_{ij}^{(r)}$. For example those blocks can give
+$D_{ij}^{(r)}=e_0e_1-e_1e_0$, while $W_{ij}=e_0e_0$.
+Each required nonproportionality is a nonempty open condition, so all
+hold simultaneously on a nonempty open set.
+
+In a relation $G_W(\lambda)+\sum_r c_rS_r(W)=0$, restriction to the
+chosen edge gives
+$(\lambda_i+\lambda_j)W_{ij}+c_rD_{ij}^{(r)}=0$, hence $c_r=0$.
+All coefficients $c_r$ vanish. On the open set of nonzero blocks the
+gauge directions are independent, completing the proof.
+\end{proof}
+
+\begin{lemma}\label{lem:four-analytic-bases}
+At the three base dimension vectors $2333,2233,2223$, the maximum
+differential ranks are respectively $41,32,24$.
+\end{lemma}
+\begin{proof}
+Write the dimensions as $(2,b,c,3)$, with $(b,c)=(3,3),(2,3),(2,2)$,
+and use zero-based basis labels. Write $f_0,f_1,f_2$ for the basis at
+vertex four. Set
+\[
+ W_{12}=e_0e_0+e_1e_1,\quad W_{13}=e_0e_0+e_1e_1,\quad
+ W_{23}=\sum_{a=0}^{\min(b,c)-1}e_ae_a,
+\]
+\[
+ W_{14}=e_0f_0,\qquad W_{24}=h_2f_1,\qquad W_{34}=h_3f_2,
+ \qquad h_i=\begin{cases}e_2,&d_i=3,\\e_0,&d_i=2.\end{cases}
+\]
+Here each tensor product is placed in its named slots. Put
+$S=V_1W_{23}+V_2W_{13}+V_3W_{12}$ inside $V_1\otimes V_2\otimes V_3$.
+The derivative image is the direct sum of the three slices
+\[
+ (S+e_0V_2V_3)f_0,\qquad
+ (S+V_1h_2V_3)f_1,\qquad
+ (S+V_1V_2h_3)f_2.
+\]
+Indeed the fourth-vertex coordinates of the variations on edges
+$14,24,34$ are independent and generate a separate copy of $S$ in
+each slice. Variations on $23,13,12$ supply respectively the three
+displayed coordinate planes.
+
+We use the following notation. In a space $V_j\otimes V_k$, write
+$I_2=e_0\otimes e_0+e_1\otimes e_1$ and, when both factors have
+dimension three, $I_3=I_2+e_2\otimes e_2$; write $I_{jk}$ for $I_2$ in
+$V_j\otimes V_k$, the padded identity. Thus $W_{12}=I_{12}$,
+$W_{13}=I_{13}$, and $W_{23}$ is $I_3$ for $2333$ and $I_{23}$
+otherwise. Elements of $S$ are written $xW_{23}+yW_{13}+zW_{12}$ with
+$x\in V_1$, $y\in V_2$, $z\in V_3$, and $x_a$ is the $e_a$ coordinate
+of $x$, and similarly for $y,z$. For a vector $e$, write
+$V_je=\{v\otimes e:v\in V_j\}$ and
+$eV_k=\{e\otimes w:w\in V_k\}$, and similarly in three slots. Read as
+$d_j\times d_k$ matrices, the \emph{coordinate cross} $V_je_1+e_1V_k$
+consists of the matrices supported on row $1$ and column $1$; it has
+dimension $d_j+d_k-1$. The quotient of a $V_j$ by one basis vector is
+identified with the span of the others. For three such spaces of
+dimensions at least two, the \emph{padded $I_2$ map} of those
+dimensions is $(x,y,z)\mapsto xI_{23}+yI_{13}+zI_{12}$, the map of
+Lemma~\ref{lem:triple-injectivity} with all three blocks equal to the
+padded identity. A slice has dimension equal to that of its
+coordinate plane plus that of the image of $S$ modulo the plane.
+
+For three two-dimensional spaces, the padded $I_2$ map
+$(x,y,z)\mapsto xI_{23}+yI_{13}+zI_{12}$ is injective: output words
+$100,010,001$ isolate $x_1,y_1,z_1$, and words $011,101,110$ isolate
+$x_0,y_0,z_0$. Increasing only the third factor to dimension three,
+while retaining the padded $I_2$ blocks, gives rank seven: the new
+coordinate of $z$ contributes $I_{12}e_2$ in a separate sector. In
+the same way the padded $I_2$ map of dimensions $232$ has rank seven,
+the new coordinate of $y$ contributing in a separate sector.
+
+For $2333$, $h_2=h_3=e_2$. Quotient the first slice by its plane
+$e_0V_2V_3$, of dimension nine. Identify $e_1V_2V_3$ with
+$V_2\otimes V_3$. Modulo the plane, $xW_{23}$, $yW_{13}$ and $zW_{12}$
+become $x_1I_3$, $ye_1$ and $e_1z$, so the remaining image is the space
+\[\Span(I_3,V_2e_1,e_1V_3).\]
+The coordinate cross
+has dimension $3+3-1=5$, and $I_3$ is outside it, since its entry
+$e_0e_0$ is not in the cross; the space has dimension six. This slice
+therefore has dimension $9+6=15$. Quotienting the second slice by its
+plane $V_1e_2V_3$, of dimension six, turns the three blocks into
+$I_{23},I_{13},I_{12}$ on $V_1$, $V_2/\langle e_2\rangle$ and $V_3$; what
+remains is the injective padded $I_2$ map of dimensions $223$, of
+rank seven, and the slice has dimension $6+7=13$. The third slice is
+symmetric: its plane $V_1V_2e_2$ has dimension six, the padded $I_2$
+map of dimensions $232$ has rank seven, and the slice has dimension
+$6+7=13$. The total is $15+13+13=41$.
+
+For $2233$, $h_2=e_0$ and $h_3=e_2$. Quotient the first slice by its
+plane $e_0V_2V_3$, of dimension six. As before, the image is
+$\Span(I_2,V_2e_1,e_1V_3)$, now in a $2$ by $3$ space. The cross has
+dimension $2+3-1=4$, and $I_2$ adds the entry $e_0e_0$, which the cross
+lacks, so the image has dimension five and the slice has dimension
+$6+5=11$. In the second slice the plane is
+$V_1e_0V_3$, of dimension six. Identify $V_1e_1V_3$ with
+$V_1\otimes V_3$. Modulo the plane, $xW_{23}$, $yW_{13}$ and $zW_{12}$
+become $xe_1$, $y_1I_2$ and $e_1z$, so the quotient is again
+$\Span(V_1e_1,I_2,e_1V_3)$, in a $2$ by $3$ space; it has dimension
+$4+1=5$, and the slice has dimension $6+5=11$.
+Quotienting the third slice by its plane $V_1V_2e_2$, of dimension
+four, leaves the injective padded $I_2$ map of dimensions $222$, of
+rank six, so the slice has dimension $4+6=10$. The total is
+$11+11+10=32$.
+
+For $2223$, $h_2=h_3=e_0$, and the three slices have the
+four-dimensional coordinate planes $e_0V_2V_3$, $V_1e_0V_3$ and
+$V_1V_2e_0$. Modulo these, the images are
+\[
+ \Span(I_2,V_2e_1,e_1V_3),\qquad
+ \Span(V_1e_1,I_2,e_1V_3),\qquad
+ \Span(V_1e_1,e_1V_2,I_2),
+\]
+each in a $2$ by $2$ space; in the third, with $V_1V_2e_1$ identified
+with $V_1\otimes V_2$, the blocks $xW_{23}$, $yW_{13}$ and $zW_{12}$
+become $xe_1$, $e_1y$ and $z_1I_2$. In each, the
+cross has dimension three and $I_2$ adds the entry $e_0e_0$, so the
+image is the entire four-dimensional matrix space. Thus every slice
+has dimension $4+4=8$, giving total rank $8+8+8=24$. These lower bounds
+meet the upper bounds
+from Lemma~\ref{lem:four-independence} and the polynomial-minor
+argument, proving maximality.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:sharp-four}]
+The case $k=0$ is Corollary~\ref{thm:main}. For $k=1,2,3$,
+permute the vertices so that the two-dimensional ones come first and
+apply Lemmas~\ref{lem:four-analytic-bases} and~\ref{lem:four-padding}.
+The known independent directions have exactly the resulting kernel
+dimension, so they exhaust the kernel at a general point.
+
+For $k=4$, take the coordinate rank-one blocks
+\[
+ W_{12}=e_0e_0,\quad W_{13}=e_0e_0,\quad W_{14}=e_1e_0,
+ \quad W_{23}=e_1e_1,\quad W_{24}=e_0e_1,\quad W_{34}=e_0e_1.
+\]
+Each derivative column is a coordinate unit. Every binary output word
+agrees with at least one specified edge block: if $x_1=0$, use $12$
+when $x_2=0$, $13$ when $x_3=0$, and $23$ otherwise. If $x_1=1$,
+use $14$ when $x_4=0$; otherwise use $24$ when $x_2=0$, $34$ when
+$x_3=0$, and $23$ in the remaining case. Varying the complementary
+edge coordinate gives the desired output unit. Hence the differential
+is surjective. The identification of image dimension with generic
+differential rank is the characteristic-zero argument used above.
+\end{proof}
+
+
+
+\section{Low-degree equations and the image boundary}
+\label{sec:boundary}
+The following observations concern complete support. They separate generic parameter recovery from the equations and special points of the output closure.
+
+\begin{proposition}\label{prop:secant}
+For arbitrary finite local dimensions and even $n\geq4$, every sum of two decomposable tensors is attained by $F$. At $n=4$, every sum of three decomposable tensors is attained. Consequently the ideal of $\cX$ has no nonzero homogeneous components in degrees one and two; at four vertices it has none in degree three either.
+\end{proposition}
+\begin{proof}
+For two decomposable tensors $x=\bigotimes_i x_i$ and $y=\bigotimes_i y_i$, take an even Hamiltonian cycle and its two alternating perfect matchings $M_x,M_y$. Set $W_{ij}=x_i\otimes x_j$ on $M_x$, $W_{ij}=y_i\otimes y_j$ on $M_y$, and all other blocks to zero. The cycle has exactly those two perfect matchings, so $F(W)=x+y$.
+
+At four vertices the matchings $12|34$, $13|24$, and $14|23$ use disjoint edge sets. Assign the two blocks of each matching to realize its prescribed decomposable tensor. Their sum is then attained. Equivalently, $\cX$ is the affine join of the three cones of tensors decomposable in these respective pair bipartitions.
+
+For completeness, if a homogeneous polynomial of degree $q$ vanishes on all sums of $q$ decomposable tensors, evaluate it on $\sum_{j=1}^q t_jx_j$. The coefficient of $t_1\cdots t_q$ is $q!$ times its polarized multilinear form on $x_1,\ldots,x_q$, so this form vanishes on every such tuple. Decomposable tensors span the ambient space, hence the form, and therefore the polynomial, is zero. Apply this with $q\leq2$ or $q\leq3$ respectively. This is the classical secant-variety principle of \cite[Lemma 3.1]{lm}.
+\end{proof}
+
+Every attained four-vertex output thus has partition rank at most three
+in the sense of \cite{naslund}, with one summand in each balanced
+bipartition; we claim neither uniqueness among arbitrary partition-rank
+decompositions nor closedness of that rank locus.
+
+The closure $\cX$ need not equal the image. By an unrefereed note
+of Afshan \cite{closure}, the ternary GHZ tensor lies in the Euclidean
+closure of the image at every even order at least four, so every
+polynomial vanishing on $\cX$ vanishes there; our generic-fibre results
+do not settle whether it is attained.
+
+A six-vertex degeneration makes the distinction explicit. Label the vertices $a_1,a_2,a_3,b_1,b_2,b_3$. On a triangular prism, give rung $a_ib_i$ the tensor $\varepsilon^2 e_i\otimes e_i$ and, when $\{i,j,k\}=\{1,2,3\}$, give both triangle edges $a_ja_k,b_jb_k$ the tensor $\varepsilon^{-1}e_i\otimes e_i$. Set other blocks to zero. There are three matchings with one rung and one matching with all three rungs, so, in this vertex order,
+\[
+ F(W(\varepsilon))=
+ \sum_{i=1}^3e_i^{\otimes6}
+ +\varepsilon^6e_1\otimes e_2\otimes e_3\otimes e_1\otimes e_2\otimes e_3.
+\]
+The limit as $\varepsilon\to0$ is the GHZ tensor, while some parameters
+diverge; this illustrates the closure result and is not an exact
+realization at any $\varepsilon\ne0$.
+
+\section*{Computational certificates and how the manuscript was produced}
+The proof of Theorem~\ref{thm:qubit} includes two finite determinant assertions, \eqref{eq:qubit-eight-det} and \eqref{eq:qubit-six-det}, with complete integer matrix specifications in the text. The standard-library program \path{verification/verify_qubit_certificates.py} builds these two matrices from their definitions in Section~\ref{sec:qubits} and recomputes both determinants by fraction-free elimination with checked exact divisions. The program \path{verification/verify_qubit_from_matchings.py} is a second implementation, not an independent check: it rebuilds the same two matrices by differentiating the perfect-matching expansion of $F$ term by term, without the hafnian formulas of Section~\ref{sec:qubits}, and recomputes the same determinants. For the eight-vertex matrix it forms the rows of $T_{[8]}(b)$ from the singleton and triple derivative rows, as in the derivation of \eqref{eq:qubit-triangle}, and checks every entry against the definition of $T_{[8]}(b)$. The other all-order and global-fibre arguments are analytic and do not rely on numerical sampling.
+
+Three further programs are supplementary checks only; no proof in this paper depends on them. The program \path{verification/check_graph.py} compares, modulo the prime $1000003$, the rank of the differential at the padded rank-three point \eqref{eq:base} with formula~\eqref{eq:graph-rank}, for every support graph on four vertices and for twelve support graphs on six vertices, all with local dimensions three, and for two formats with unequal local dimensions; for the six-vertex graphs it also checks a selected-edge version of the formula. The program \path{verification/independent_rank_check.py} compares, modulo the same prime, the rank of the differential at the padded rank-three point on complete support with Corollary~\ref{thm:main} at four and six vertices, and with Corollary~\ref{thm:edges} for several selected edge sets at six vertices. The program \path{verification/verify_four.py} rechecks rank certificates at four vertices for Theorem~\ref{thm:sharp-four}: for each it computes a nonzero integer minor of the differential, and checks that the vertex-rescaling directions and the directions $S_r(W)$ of Lemma~\ref{lem:root-shear} lie in the kernel and are independent.
+
+The SHA-256 values of the five programs, all in the directory \path{verification/}, are as follows.
+\begin{center}
+\footnotesize
+\begin{tabular}{@{}ll@{}}
+\toprule
+Program & SHA-256\\
+\midrule
+\path{check_graph.py} & \texttt{074600b5c6d928c1117c76e936a9f7746dbb0235234de9c78fc77e833e219e44}\\
+\path{independent_rank_check.py} & \texttt{3a6ddca30b003de2ca40b977168750ba169922a5596508d6dc0bbdda7d58f041}\\
+\path{verify_four.py} & \texttt{2a0bd220e8a46ae7b118f1e9e51d0c72c04f4db24cdbe1755271a6b10db03ce2}\\
+\path{verify_qubit_certificates.py} & \texttt{190ff048fc3c440ef5ed12e8f3305385d2012cdea7aea275b234cc8a4c73dc40}\\
+\path{verify_qubit_from_matchings.py} & \texttt{00d60f410a952fa5759cf760907c5af67107a972d06aa42b73b196e029438422}\\
+\bottomrule
+\end{tabular}
+\end{center}
+A versioned public archive of these programs has not yet been created; the SHA-256 values above identify the versions used.
+
+AI systems from OpenAI, working under the direction of the person who publishes this manuscript as Ignoramus, developed and audited the statements and proofs, performed the computations, compared the results with the literature and wrote the text of its first three versions, apart from the contributions of the reviews described below. That person does not have the training to check the proofs and has not checked them. Each of those versions was reviewed by Claude (Anthropic), also an AI system; the last review included a separate re-derivation of the proof of Theorem~\ref{thm:global-all-order}. No human mathematician has checked the manuscript. The main contributions of the reviews are these. The first review identified and proved the additive root symmetry of Lemma~\ref{lem:root-shear}, and pointed out that at four vertices the image closure is a join with no cubic equations (Proposition~\ref{prop:secant}). From finite computations it suggested the four-vertex rank law of Theorem~\ref{thm:sharp-four}, that the dimension formula survives two-dimensional factors from six vertices on (Theorem~\ref{thm:qubit}) and, at four vertices, the single-orbit fibre of Theorem~\ref{thm:global-all-order}. It also drew attention to the closure result cited in Section~\ref{sec:boundary} and supplied the six-vertex degeneration given there. The second review supplied the six-vertex example of an additional gauge in Section~\ref{sec:arbitrary}, the sparse two-dimensional counterexample $K_6-\{46,56\}$ with its computed ranks and its mechanism (Proposition~\ref{prop:degree-three-shear} and Remark~\ref{ex:sparse-qubit-failure}), the computed rank $51$ that Remark~\ref{rem:six-vertex} explains, and the observation from computation that the cofactor contact spaces are lines at six vertices, with the suggestion to apply the lower-order result on vertex subsets; it named the gluing step, including the case of zero proportionality constants, as still needing an argument. The proofs of Theorems~\ref{thm:global-all-order}, \ref{thm:qubit} and~\ref{thm:sharp-four}, of Proposition~\ref{prop:degree-three-shear} and of the bound in Remark~\ref{rem:six-vertex} were developed by the OpenAI systems. The present, fourth version revises the exposition, the citations and this statement in response to the third review, and leaves the content of every theorem unchanged. Its edits were written by Claude (Anthropic) and have been checked only by further Claude agents. They include the restatement of the main results in the introduction and the steps written out in the proofs of Section~\ref{sec:global-all}, as that review asked, and three things taken from the review itself: the works it found that are now cited, the count of matching cones in the introduction, and the remark that Theorem~\ref{thm:qubit} and Proposition~\ref{prop:local} give local injectivity when the factors are two-dimensional. These checks are not human refereeing or a certification of originality. The manuscript is a draft for mathematical review.
+
+\begin{thebibliography}{99}
+\raggedright
+\bibitem{abdi-silina}
+A.~Abdi and O.~Silina,
+\emph{Integral bases, perfect matchings, and the Petersen graph},
+arXiv:2508.15602, version~3 (2026),
+Sections~1.1--1.2.
+\url{https://arxiv.org/abs/2508.15602v3}.
+
+\bibitem{closure}
+A.~Afshan,
+\emph{GHZ tensors in the closure of matching tensors},
+Lyrebird Mathematical Note LYR--005, version 1.1, September 1, 2026,
+unrefereed note.
+\url{https://lyrebird.alirezaafshan.com/papers/ghz-closure/}.
+
+\bibitem{afs}
+C.~Am\'endola, J.-C.~Faug\`ere and B.~Sturmfels,
+\emph{Moment varieties of Gaussian mixtures},
+J. Algebraic Stat. \textbf{7} (2016), 14--28.
+arXiv:1510.04654.
+\url{https://arxiv.org/abs/1510.04654}.
+
+\bibitem{ballico}
+E.~Ballico,
+\emph{Joins, secant varieties and their associated Grassmannians},
+Mathematics \textbf{12}(9) (2024), 1274.
+\url{https://doi.org/10.3390/math12091274}.
+
+\bibitem{bsl}
+M.~Bani\'c, J.~E.~Sipe and M.~Liscidini,
+\emph{Photonic multipartite entanglement in discrete variables without arbitrary unitaries},
+arXiv:2409.04250 (2024).
+\url{https://arxiv.org/abs/2409.04250}.
+
+\bibitem{bdg}
+A.~Bernardi, C.~De Lazzari and F.~Gesmundo,
+\emph{Dimension of tensor network varieties},
+Commun. Contemp. Math. \textbf{25}(10) (2023), 2250059.
+\url{https://doi.org/10.1142/S0219199722500596}.
+
+\bibitem{bc-joins}
+A.~Blomenhofer and A.~Casarotti,
+\emph{On defectivity of joins, reducible secants and Fr\"oberg's conjecture},
+arXiv:2509.10443 (2025).
+\url{https://arxiv.org/abs/2509.10443}.
+
+\bibitem{cgi}
+L.~S.~Chandran, R.~Gajjala and A.~M.~Illickan,
+\emph{Krenn--Gu conjecture for sparse graphs},
+49th International Symposium on Mathematical Foundations of Computer Science (MFCS 2024),
+LIPIcs \textbf{306} (2024), 41:1--41:15.
+\url{https://doi.org/10.4230/LIPIcs.MFCS.2024.41}.
+
+\bibitem{co}
+L.~Chiantini and G.~Ottaviani,
+\emph{On generic identifiability of 3-tensors of small rank},
+SIAM J. Matrix Anal. Appl. \textbf{33}(3) (2012), 1018--1037.
+\url{https://doi.org/10.1137/110829180}.
+
+\bibitem{cmnt}
+J.~Cruickshank, F.~Mohammadi, A.~Nixon and S.~Tanigawa,
+\emph{Identifiability of points and rigidity of hypergraphs under algebraic constraints},
+arXiv:2305.18990 (2023).
+\url{https://arxiv.org/abs/2305.18990}.
+
+\bibitem{elp}
+J.~Edmonds, W.~R.~Pulleyblank and L.~Lov\'asz,
+\emph{Brick decompositions and the matching rank of graphs},
+Combinatorica \textbf{2} (1982), 247--274.
+\url{https://doi.org/10.1007/BF02579233}.
+
+\bibitem{godsil}
+C.~Godsil and G.~Royle,
+\emph{Algebraic Graph Theory}, Graduate Texts in Mathematics 207,
+Springer, 2001.
+\url{https://doi.org/10.1007/978-1-4613-0163-9}.
+
+\bibitem{gu-three}
+X.~Gu, L.~Chen, A.~Zeilinger and M.~Krenn,
+\emph{Quantum experiments and graphs. III. High-dimensional and multiparticle entanglement},
+Phys. Rev. A \textbf{99}(3) (2019), 032338.
+\url{https://doi.org/10.1103/PhysRevA.99.032338}.
+
+\bibitem{gu}
+X.~Gu, M.~Erhard, A.~Zeilinger and M.~Krenn,
+\emph{Quantum experiments and graphs II: Quantum interference, computation, and state generation},
+Proc. Natl. Acad. Sci. USA \textbf{116}(10) (2019), 4147--4155.
+\url{https://doi.org/10.1073/pnas.1815884116}.
+
+\bibitem{isserlis}
+L.~Isserlis,
+\emph{On a formula for the product-moment coefficient of any order of a normal frequency distribution in any number of variables},
+Biometrika \textbf{12}(1/2) (1918), 134--139.
+\url{https://doi.org/10.2307/2331932}.
+
+\bibitem{kenyon}
+R.~Kenyon,
+\emph{Lectures on dimers},
+arXiv:0910.3129, Section~3.2.
+\url{https://arxiv.org/abs/0910.3129}.
+
+\bibitem{kgs}
+M.~Krenn, X.~Gu and D.~Solt\'esz,
+\emph{Questions on the structure of perfect matchings inspired by quantum physics},
+Proceedings of the 2nd Croatian Combinatorial Days (2019), 57--70.
+\url{https://doi.org/10.5592/CO/CCD.2018.05}.
+
+\bibitem{kgz}
+M.~Krenn, X.~Gu and A.~Zeilinger,
+\emph{Quantum experiments and graphs: Multiparty states as coherent superpositions of perfect matchings},
+Phys. Rev. Lett. \textbf{119} (2017), 240403.
+\url{https://doi.org/10.1103/PhysRevLett.119.240403}.
+
+\bibitem{lm}
+J.~M.~Landsberg and L.~Manivel,
+\emph{On the ideals of secant varieties of Segre varieties},
+Found. Comput. Math. \textbf{4} (2004), 397--422.
+Author manuscript:
+\url{https://people.tamu.edu/~jml/LMsec111403.pdf}.
+
+\bibitem{lovasz}
+L.~Lov\'asz,
+\emph{Matching structure and the matching lattice},
+J. Combin. Theory Ser. B \textbf{43}(2) (1987), 187--222.
+\url{https://doi.org/10.1016/0095-8956(87)90021-9}.
+
+\bibitem{naddef}
+D.~Naddef,
+\emph{Rank of maximum matchings in a graph},
+Mathematical Programming \textbf{22}(1) (1982), 52--70.
+\url{https://doi.org/10.1007/BF01581025}.
+
+\bibitem{naslund}
+E.~Naslund,
+\emph{The partition rank of a tensor and $k$-right corners in $\mathbb F_q^n$},
+J. Combin. Theory Ser. A \textbf{174} (2020), 105190.
+\url{https://doi.org/10.1016/j.jcta.2019.105190}.
+
+\bibitem{blomenhofer}
+A.~Taveira Blomenhofer,
+\emph{Gaussian mixture identifiability from degree 6 moments},
+Algebraic Statistics \textbf{16}(1) (2025), 1--28.
+\url{https://doi.org/10.2140/astat.2025.16.1}.
+
+\bibitem{centeredGaussian}
+A.~Taveira Blomenhofer, A.~Casarotti, M.~Micha\l ek and A.~Oneto,
+\emph{Identifiability for mixtures of centered Gaussians and sums of powers
+of quadratics}, Bull. Lond. Math. Soc. \textbf{55}(5) (2023), 2407--2424.
+\url{https://doi.org/10.1112/blms.12871}.
+
+\bibitem{repo-star}
+YesterdaysLemon (repository),
+\emph{Pinned hafnian star systems give rational edge tomography with three surplus roots},
+unrefereed repository note, revision \texttt{dc4e7c9} (2026).
+\url{https://github.com/YesterdaysLemon/krenn-gu-research/blob/dc4e7c9ef97e3d4d0d47e1d3403e61d66a498ddc/claims/arbitrary-order/PINNED_HAFNIAN_STAR_SYSTEM_AND_RATIONAL_EDGE_TOMOGRAPHY_THEOREM.md}.
+
+\bibitem{repo-four}
+YesterdaysLemon (repository),
+\emph{Principal four-hafnians generically recover every edge up to finitely many branches},
+unrefereed repository note, revision \texttt{dc4e7c9} (2026).
+\url{https://github.com/YesterdaysLemon/krenn-gu-research/blob/dc4e7c9ef97e3d4d0d47e1d3403e61d66a498ddc/claims/arbitrary-order/PRINCIPAL_FOUR_HAFNIAN_GENERIC_EDGE_TOMOGRAPHY_AND_P7_SINGULAR_FIBRE_BOUNDARY.md}.
+
+\end{thebibliography}
+\end{document}
